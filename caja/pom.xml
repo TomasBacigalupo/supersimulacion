@@ -13,11 +13,13 @@
   <name>caja</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+  	
   	<dependency> 
   		<groupId>ar.edu.itba.sds</groupId> 
   		<artifactId>interfaces</artifactId> 
   		<version>${parent.version}</version>
 	</dependency>
+	
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

@@ -32,15 +32,9 @@
   
   
   <modules>
-              
-    
-    
     <module>interfaces</module>
-              
-      
-    
-    <module>caja</module>
-      
+    <module>caja</module> 
+  	<module>model</module>
   </modules>
     
 

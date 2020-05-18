@@ -1,5 +1,7 @@
 package ar.edu.itba.sds;
 
+import java.util.List;
+
 public class CajaImpl implements Caja {
 
 	public Position position(int index) {
