@@ -7,7 +7,7 @@
         
   
   
-  <groupId>ar.itba.edu.sds</groupId>
+  <groupId>ar.edu.itba.sds</groupId>
         
   
   
@@ -32,9 +32,10 @@
   
   
   <modules>
+  	<module>model</module>
     <module>interfaces</module>
     <module>caja</module> 
-  	<module>model</module>
+  	
   </modules>
     
 
