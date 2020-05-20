@@ -119,8 +119,10 @@ public class CajaImpl implements Caja {
 
 	private void print(Queue<Integer> q) {
 		System.out.print("[");
+		int counter = 0;
 		for(Integer i : q) {
-			System.out.print(i + " ");
+			System.out.print(this.position(counter) + " ");
+			counter ++;
 		}
 		System.out.println("]");
 	}
