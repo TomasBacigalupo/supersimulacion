@@ -36,6 +36,9 @@ public class App {
 	        while(!caja.isDone()) {
 	        	caja.atender();
 	        }
+	        
+	        System.out.println(caja.ovito);
+	        
        }
     }
 }

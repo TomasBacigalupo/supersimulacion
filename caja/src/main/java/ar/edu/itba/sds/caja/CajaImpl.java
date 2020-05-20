@@ -23,6 +23,8 @@ public class CajaImpl implements Caja {
 	//paying
 	int x = 0;
 	
+	StringBuilder ovito = new StringBuilder();
+	
 	public CajaImpl(Position p,double D,double H,double d,int max) {
 		/*
 		p is the inception position
@@ -96,16 +98,19 @@ public class CajaImpl implements Caja {
 			//System.out.println("A work");
 			queue.poll();
 			print(queue);
+			ovito.append(this.toOvito());
 		}
 		if(!B.ocupado) {
 			B.work();
 			//System.out.println("B work");
 			queue.poll();
 			print(queue);
+			ovito.append(this.toOvito());
 		}
 		if(A.isDone()) {
 			A.rest();
 			print(queue);
+			ovito.append(this.toOvito());
 			//x = queue.poll();
 			//System.out.println("A rest");
 			//System.out.println(x + " goes home");
@@ -114,6 +119,7 @@ public class CajaImpl implements Caja {
 		if(B.isDone()) {
 			B.rest();
 			print(queue);
+			ovito.append(this.toOvito());
 			//x = queue.poll();
 			//System.out.println("B rest");
 			//System.out.println(x + " goes home");
@@ -141,7 +147,20 @@ public class CajaImpl implements Caja {
 		return queue.isEmpty();
 	}
 	
-	
+	public String toOvito(){
+		StringBuilder str = new StringBuilder();
+		//return "0 " + this.position.toString()+" "+ this.radius + " 1 1 0";
+		//return "0 " +  + "1 1 0";
+		int counter = 0;
+		for(Integer i : this.queue) {
+			str.append(counter + " ");
+			str.append(this.position(counter));
+			str.append(" 1 1 0");
+			str.append("\n");
+			counter ++;
+		}
+		return str.toString();
+    }
 	
 }
 
