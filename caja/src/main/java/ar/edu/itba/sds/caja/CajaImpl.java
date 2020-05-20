@@ -89,34 +89,40 @@ public class CajaImpl implements Caja {
 	}
 
 	public void atender() {
+		//print(queue);
 		if(!A.ocupado) {
 			A.work();
-			System.out.println("A work");
+			//System.out.println("A work");
 		}
 		if(!B.ocupado) {
 			B.work();
-			System.out.println("B work");
+			//System.out.println("B work");
 		}
 		if(A.isDone()) {
 			A.rest();
 			x = queue.poll();
-			System.out.println("A rest");
-			System.out.println(x + " goes home");
-			System.out.println(A);
+			//System.out.println("A rest");
+			//System.out.println(x + " goes home");
+			//System.out.println(A);
 		}
 		if(B.isDone()) {
 			B.rest();
 			x = queue.poll();
-			System.out.println("B rest");
-			System.out.println(x + " goes home");
-			System.out.println(B);
+			//System.out.println("B rest");
+			//System.out.println(x + " goes home");
+			//System.out.println(B);
 		}
 		if(B.isDone() || A.isDone()) {
-			for(Integer i : queue) {
-				System.out.print(i);
-			}
-			System.out.println();
+			print(queue);
 		}
+	}
+
+	private void print(Queue<Integer> q) {
+		System.out.print("[");
+		for(Integer i : q) {
+			System.out.print(i + " ");
+		}
+		System.out.println("]");
 	}
 
 	public boolean isDone() {

@@ -28,6 +28,8 @@ public class App {
 
         caja.add(4);
         
+        caja.add(5);
+        
         while(!caja.isDone()) {
         	caja.atender();
         }
