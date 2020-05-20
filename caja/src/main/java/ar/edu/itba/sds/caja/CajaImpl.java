@@ -94,27 +94,30 @@ public class CajaImpl implements Caja {
 		if(!A.ocupado) {
 			A.work();
 			//System.out.println("A work");
+			queue.poll();
+			print(queue);
 		}
 		if(!B.ocupado) {
 			B.work();
 			//System.out.println("B work");
+			queue.poll();
+			print(queue);
 		}
 		if(A.isDone()) {
 			A.rest();
-			x = queue.poll();
+			print(queue);
+			//x = queue.poll();
 			//System.out.println("A rest");
 			//System.out.println(x + " goes home");
 			//System.out.println(A);
 		}
 		if(B.isDone()) {
 			B.rest();
-			x = queue.poll();
+			print(queue);
+			//x = queue.poll();
 			//System.out.println("B rest");
 			//System.out.println(x + " goes home");
 			//System.out.println(B);
-		}
-		if(B.isDone() || A.isDone()) {
-			print(queue);
 		}
 	}
 	
@@ -123,6 +126,8 @@ public class CajaImpl implements Caja {
 	}
 	
 	private void print(Queue<Integer> q) {
+		System.out.print("[ " + A.ocupado + " ]");
+		System.out.print("[ " + B.ocupado + " ]");
 		System.out.print("[");
 		int counter = 0;
 		for(Integer i : q) {
