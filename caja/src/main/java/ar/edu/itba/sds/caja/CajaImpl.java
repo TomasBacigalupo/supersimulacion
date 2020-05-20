@@ -94,6 +94,7 @@ public class CajaImpl implements Caja {
 	public void atender() {
 		//print(queue);
 		if(!A.ocupado) {
+			ovito.append(this.toOvito());
 			A.work();
 			//System.out.println("A work");
 			queue.poll();
@@ -101,6 +102,7 @@ public class CajaImpl implements Caja {
 			ovito.append(this.toOvito());
 		}
 		if(!B.ocupado) {
+			ovito.append(this.toOvito());
 			B.work();
 			//System.out.println("B work");
 			queue.poll();
@@ -151,8 +153,21 @@ public class CajaImpl implements Caja {
 		StringBuilder str = new StringBuilder();
 		//return "0 " + this.position.toString()+" "+ this.radius + " 1 1 0";
 		//return "0 " +  + "1 1 0";
-		str.append(queue.size() + "\n");
+		str.append(queue.size() + 2 + "\n");
 		str.append("//\n");
+		if(!A.ocupado) { 
+			str.append("-2 " + L + " 0.5 1 0 0 \n");
+		}else {
+			str.append("-2 " + L + " 0.5 0 0 1 \n");
+		}
+		if(!B.ocupado) {
+			str.append("-1 " + R + " 0.5 1 0 0 \n");
+		}else {
+			str.append("-1 " + R + " 0.5 0 0 1 \n");
+		}
+			
+			
+		
 		int counter = 0;
 		for(Integer i : this.queue) {
 			str.append(counter + " ");

@@ -13,7 +13,7 @@ public class App {
         System.out.println("Driver Class Caja Module\n");
         
         Position p = new Position(0,0);
-        CajaImpl caja = new CajaImpl(p,10,5,1,4);
+        CajaImpl caja = new CajaImpl(p,10,5,1,8);
         System.out.println(caja);
         
         while(true) {
@@ -31,6 +31,8 @@ public class App {
 	        caja.add(50);
 	        
 	        caja.add(60);
+	        
+	        caja.add(70);
 	        
 	        
 	        caja.print();
