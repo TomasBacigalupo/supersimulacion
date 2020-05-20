@@ -151,11 +151,14 @@ public class CajaImpl implements Caja {
 		StringBuilder str = new StringBuilder();
 		//return "0 " + this.position.toString()+" "+ this.radius + " 1 1 0";
 		//return "0 " +  + "1 1 0";
+		str.append(queue.size() + "\n");
+		str.append("//\n");
 		int counter = 0;
 		for(Integer i : this.queue) {
 			str.append(counter + " ");
 			str.append(this.position(counter));
-			str.append(" 1 1 0");
+			str.append(" 0.5");
+			str.append(" 0 0 1");
 			str.append("\n");
 			counter ++;
 		}

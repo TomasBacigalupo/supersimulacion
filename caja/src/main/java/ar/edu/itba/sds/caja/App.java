@@ -1,10 +1,11 @@
 package ar.edu.itba.sds.caja;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 import ar.edu.itba.sds.model.Position;
 
 public class App {
-	
-	
 	
     public static void main( String[] args ){
     	
@@ -38,7 +39,21 @@ public class App {
 	        }
 	        
 	        System.out.println(caja.ovito);
+	        write("output.txt",caja.ovito.toString());
 	        
        }
     }
+    
+    // write to a file
+    static void write (String filename , String value) {
+     	try {
+   	      FileWriter myWriter = new FileWriter(filename);
+   	      myWriter.write(value);
+   	      myWriter.close();
+   	    } catch (IOException e) {
+   	      System.out.println("An error occurred.");
+   	      e.printStackTrace();
+   	    }
+     }
+    
 }
