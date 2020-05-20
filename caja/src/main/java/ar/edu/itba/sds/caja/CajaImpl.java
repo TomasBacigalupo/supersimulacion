@@ -102,12 +102,20 @@ public class CajaImpl implements Caja {
 			x = queue.poll();
 			System.out.println("A rest");
 			System.out.println(x + " goes home");
+			System.out.println(A);
 		}
 		if(B.isDone()) {
 			B.rest();
 			x = queue.poll();
 			System.out.println("B rest");
 			System.out.println(x + " goes home");
+			System.out.println(B);
+		}
+		if(B.isDone() || A.isDone()) {
+			for(Integer i : queue) {
+				System.out.print(i);
+			}
+			System.out.println();
 		}
 	}
 
