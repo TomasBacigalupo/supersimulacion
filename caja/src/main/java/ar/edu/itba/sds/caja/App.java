@@ -14,22 +14,23 @@ public class App {
         Position p = new Position(0,0);
         CajaImpl caja = new CajaImpl(p,10,5,1,5);
         System.out.println(caja);
-        System.out.println(caja.position(0));
-        System.out.println(caja.position(1));
-        System.out.println(caja.position(2));
+        
+        
         
         caja.add(0);
 
-        caja.add(1);
+        caja.add(10);
 
-        caja.add(2);
+        caja.add(20);
 
-        caja.add(3);
+        caja.add(30);
 
-        caja.add(4);
+        caja.add(40);
         
-        caja.add(5);
+        caja.add(50);
         
+        
+        caja.print();
         while(!caja.isDone()) {
         	caja.atender();
         }

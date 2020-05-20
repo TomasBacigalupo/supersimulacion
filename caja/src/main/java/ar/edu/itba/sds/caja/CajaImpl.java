@@ -85,7 +85,8 @@ public class CajaImpl implements Caja {
 	
 	@Override
 	public void add(int elem) {
-		queue.add(elem);
+		if(queue.size() < max)
+			queue.add(elem);
 	}
 
 	public void atender() {
@@ -116,7 +117,11 @@ public class CajaImpl implements Caja {
 			print(queue);
 		}
 	}
-
+	
+	public void print() {
+		print(this.queue);
+	}
+	
 	private void print(Queue<Integer> q) {
 		System.out.print("[");
 		int counter = 0;
