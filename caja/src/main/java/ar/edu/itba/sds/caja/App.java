@@ -9,5 +9,8 @@ public class App {
         Position p = new Position(0,0);
         CajaImpl caja = new CajaImpl(p,10,5,1);
         System.out.println(caja);
+        System.out.println(caja.position(0));
+        System.out.println(caja.position(1));
+        System.out.println(caja.position(2));
     }
 }

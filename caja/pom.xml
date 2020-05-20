@@ -25,7 +25,7 @@
   		<groupId>ar.edu.itba.sds</groupId> 
   		<artifactId>interfaces</artifactId> 
   		<version>${project.parent.version}</version>
-  		<scope>runtime</scope>
+  		<!-- <scope>runtime</scope> -->
 	</dependency>
 	
     <dependency>

@@ -13,6 +13,7 @@ public class CajaImpl implements Caja {
 	double H;
 	Position L;
 	Position R;
+	double d;
 	
 	public CajaImpl(Position p,double D,double H,double d) {
 		/*
@@ -25,7 +26,7 @@ public class CajaImpl implements Caja {
 				.
 				.
 				.
-				0 ------------> let x be (x0,y0) then the i-th 0 is (x0,y0 + i*d)
+				0 ------------> let x be (x0,y0) then the i-th 0 is (x0,y0 + i*d + H)
 				.
 				.
 				.
@@ -49,21 +50,22 @@ public class CajaImpl implements Caja {
 		L.substract(aux);
 		this.R = new Position(p.x,p.y);
 		R.add(aux);
-		
+		this.d = d;
 	}
 	
+	@Override
 	public Position position(int index) {
-		// TODO Auto-generated method stub
-		return null;
+		Position p = new Position(this.p.x , this.p.y + index*this.d + this.H);
+		return p;
 	}
-
+	
+	@Override
 	public boolean hasFreeSpace(int index) {
-		// TODO Auto-generated method stub
 		return false;
 	}
-
+	
+	@Override
 	public List<Integer> status() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	
