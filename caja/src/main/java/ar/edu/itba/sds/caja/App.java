@@ -1,4 +1,6 @@
-package ar.edu.itba.sds;
+package ar.edu.itba.sds.caja;
+
+import ar.edu.itba.sds.model.Position;
 
 public class App {
     public static void main( String[] args ){

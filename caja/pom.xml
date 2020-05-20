@@ -9,7 +9,7 @@
   </parent>
   <groupId>ar.edu.itba.sds</groupId>
   <artifactId>caja</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>caja</name>
   <url>http://maven.apache.org</url>
   
@@ -25,6 +25,7 @@
   		<groupId>ar.edu.itba.sds</groupId> 
   		<artifactId>interfaces</artifactId> 
   		<version>${project.parent.version}</version>
+  		<scope>runtime</scope>
 	</dependency>
 	
     <dependency>
@@ -58,7 +59,7 @@
           <manifest>
             <addClasspath>true</addClasspath>
             <!-- <classpathPrefix>lib/</classpathPrefix> -->
-            <mainClass>ar.edu.itba.sds.App</mainClass>
+            <mainClass>ar.edu.itba.sds.caja.App</mainClass>
           </manifest>
         </archive>
       </configuration>

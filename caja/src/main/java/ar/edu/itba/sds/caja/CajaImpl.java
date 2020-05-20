@@ -1,6 +1,10 @@
-package ar.edu.itba.sds;
+package ar.edu.itba.sds.caja;
 
 import java.util.List;
+
+
+import ar.edu.itba.sds.interfaces.Caja;
+import ar.edu.itba.sds.model.Position;
 
 public class CajaImpl implements Caja {
 	

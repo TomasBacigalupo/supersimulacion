@@ -1,9 +1,9 @@
-package ar.edu.itba.sds;
+package ar.edu.itba.sds.model;
 
 public class Position {
 	
-	double x;
-	double y;
+	public double x;
+	public double y;
 	
 	public Position(double x, double y) {
 		this.x = x;
