@@ -1,7 +1,9 @@
 package ar.edu.itba.sds.caja;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
-
+import java.util.Queue;
 
 import ar.edu.itba.sds.interfaces.Caja;
 import ar.edu.itba.sds.model.Position;
@@ -14,8 +16,14 @@ public class CajaImpl implements Caja {
 	Position L;
 	Position R;
 	double d;
+	Cajero A = new Cajero();
+	Cajero B = new Cajero();
+	int max;
+	Queue<Integer> queue = new LinkedList <>();//waiting
+	//paying
+	int x = 0;
 	
-	public CajaImpl(Position p,double D,double H,double d) {
+	public CajaImpl(Position p,double D,double H,double d,int max) {
 		/*
 		p is the inception position
 		D is the distance that separates the attention positions
@@ -51,6 +59,7 @@ public class CajaImpl implements Caja {
 		this.R = new Position(p.x,p.y);
 		R.add(aux);
 		this.d = d;
+		this.max = max;
 	}
 	
 	@Override
@@ -60,8 +69,8 @@ public class CajaImpl implements Caja {
 	}
 	
 	@Override
-	public boolean hasFreeSpace(int index) {
-		return false;
+	public boolean hasFreeSpace() {
+		return queue.size() < max;
 	}
 	
 	@Override
@@ -73,5 +82,40 @@ public class CajaImpl implements Caja {
 	public String toString() {
 		return String.format("p = %s		L = %s	R = %s	\n",p.toString(),L.toString(),R.toString());
 	}
+	
+	@Override
+	public void add(int elem) {
+		queue.add(elem);
+	}
 
+	public void atender() {
+		if(!A.ocupado) {
+			A.work();
+			System.out.println("A work");
+		}
+		if(!B.ocupado) {
+			B.work();
+			System.out.println("B work");
+		}
+		if(A.isDone()) {
+			A.rest();
+			x = queue.poll();
+			System.out.println("A rest");
+			System.out.println(x + " goes home");
+		}
+		if(B.isDone()) {
+			B.rest();
+			x = queue.poll();
+			System.out.println("B rest");
+			System.out.println(x + " goes home");
+		}
+	}
+
+	public boolean isDone() {
+		return queue.isEmpty();
+	}
+	
+	
+	
 }
+
