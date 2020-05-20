@@ -5,7 +5,7 @@ public class App {
         System.out.println("Hello World!");
         System.out.println("Driver Class Caja Module");
         Position p = new Position(0,0);
-        CajaImpl caja = new CajaImpl(p);
+        CajaImpl caja = new CajaImpl(p,10,5,1);
         System.out.println(caja);
     }
 }
