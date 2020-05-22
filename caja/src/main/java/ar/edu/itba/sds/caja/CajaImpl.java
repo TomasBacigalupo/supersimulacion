@@ -155,7 +155,7 @@ public class CajaImpl implements Caja {
 		StringBuilder str = new StringBuilder();
 		//return "0 " + this.position.toString()+" "+ this.radius + " 1 1 0";
 		//return "0 " +  + "1 1 0";
-		str.append(queue.size() + 2 + 5*10*2 + "\n");
+		str.append(queue.size() + 2 + 5*(20-5)*2 + "\n");
 		str.append("//\n");
 		if(!A.ocupado) {
 			str.append("-2 " + L + " 0.5 1 0 0 \n");

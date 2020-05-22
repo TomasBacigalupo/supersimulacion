@@ -20,7 +20,7 @@ public class App {
         System.out.println("Driver Class Caja Module\n");
         
         Position p = new Position(0,0);
-        CajaImpl caja = new CajaImpl(p,10,5,1,12);
+        CajaImpl caja = new CajaImpl(p,10,5,1.5,12);
         System.out.println(caja);
         
         Random rand = new Random();
@@ -86,17 +86,33 @@ public class App {
      public static String poligons(){
     	StringBuilder sb = new StringBuilder();
 		 for (int i = 5; i < 10 ; i++) {
-			 for (int j = 5; j <15; j++) {
+			 for (int j = 5; j <20; j++) {
 				 sb.append(-3*i*j + " " + i + " " + j + " " + 1  + " " +  1 + " " + 1 + " " + 1 + "\n" );
 			 }
 		 }
 		 for (int i = 5; i < 10 ; i++) {
-			 for (int j = 5; j <15; j++) {
+			 for (int j = 5; j <20; j++) {
 				 sb.append(-7*i*j + " " + -i + " " + j + " " + 1  + " " +  1 + " " + 1 + " " + 1 + "\n" );
 			 }
 		 }
 
 		 return sb.toString();
 	 }
+
+	public static String poligons(double xi, double xf, double yi, double yf ){
+		StringBuilder sb = new StringBuilder();
+		for (int i = 5; i < 10 ; i++) {
+			for (int j = 5; j <20; j++) {
+				sb.append(-3*i*j + " " + i + " " + j + " " + 1  + " " +  1 + " " + 1 + " " + 1 + "\n" );
+			}
+		}
+		for (int i = 5; i < 10 ; i++) {
+			for (int j = 5; j <20; j++) {
+				sb.append(-7*i*j + " " + -i + " " + j + " " + 1  + " " +  1 + " " + 1 + " " + 1 + "\n" );
+			}
+		}
+
+		return sb.toString();
+	}
     
 }
