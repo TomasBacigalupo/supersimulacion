@@ -4,4 +4,4 @@
 *.iml
 out/*
 target/*
-caja/output.txt
+caja/output*.txt
