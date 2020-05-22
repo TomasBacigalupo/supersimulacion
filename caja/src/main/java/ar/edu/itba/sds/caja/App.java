@@ -1,5 +1,6 @@
 package ar.edu.itba.sds.caja;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -8,6 +9,8 @@ import ar.edu.itba.sds.model.Position;
 public class App {
 	
     public static void main( String[] args ){
+		File f = new File("output.txt");
+		f.delete();
     	
         System.out.println("Hello World!");
         System.out.println("Driver Class Caja Module\n");
@@ -40,7 +43,7 @@ public class App {
 	        	caja.atender();
 	        }
 	        
-	        System.out.println(caja.ovito);
+	        //System.out.println(caja.ovito);
 	        write("output.txt",caja.ovito.toString());
 	        
        }
@@ -48,6 +51,7 @@ public class App {
     
     // write to a file
     static void write (String filename , String value) {
+
      	try {
    	      FileWriter myWriter = new FileWriter(filename);
    	      myWriter.write(value);
@@ -57,5 +61,21 @@ public class App {
    	      e.printStackTrace();
    	    }
      }
+     
+     public static String poligons(){
+    	StringBuilder sb = new StringBuilder();
+		 for (int i = 5; i < 10 ; i++) {
+			 for (int j = 5; j <15; j++) {
+				 sb.append(-3*i*j + " " + i + " " + j + " " + 1  + " " +  1 + " " + 1 + " " + 1 + "\n" );
+			 }
+		 }
+		 for (int i = 5; i < 10 ; i++) {
+			 for (int j = 5; j <15; j++) {
+				 sb.append(-7*i*j + " " + -i + " " + j + " " + 1  + " " +  1 + " " + 1 + " " + 1 + "\n" );
+			 }
+		 }
+
+		 return sb.toString();
+	 }
     
 }

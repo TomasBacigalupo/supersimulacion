@@ -58,8 +58,10 @@ public class CajaImpl implements Caja {
 		Position aux = new Position(D,0);
 		this.L = new Position(p.x,p.y);
 		L.substract(aux);
+		L.escalarProduct(1.5/2);
 		this.R = new Position(p.x,p.y);
 		R.add(aux);
+		R.escalarProduct(1.5/2);
 		this.d = d;
 		this.max = max;
 	}
@@ -153,16 +155,18 @@ public class CajaImpl implements Caja {
 		StringBuilder str = new StringBuilder();
 		//return "0 " + this.position.toString()+" "+ this.radius + " 1 1 0";
 		//return "0 " +  + "1 1 0";
-		str.append(queue.size() + 2 + "\n");
+		str.append(queue.size() + 2 + 5*10*2 + "\n");
 		str.append("//\n");
-		if(!A.ocupado) { 
+		if(!A.ocupado) {
 			str.append("-2 " + L + " 0.5 1 0 0 \n");
 		}else {
 			str.append("-2 " + L + " 0.5 0 0 1 \n");
 		}
 		if(!B.ocupado) {
+
 			str.append("-1 " + R + " 0.5 1 0 0 \n");
 		}else {
+
 			str.append("-1 " + R + " 0.5 0 0 1 \n");
 		}
 			
@@ -177,6 +181,7 @@ public class CajaImpl implements Caja {
 			str.append("\n");
 			counter ++;
 		}
+		str.append(App.poligons());
 		return str.toString();
     }
 	
