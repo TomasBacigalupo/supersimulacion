@@ -9,7 +9,7 @@ import ar.edu.itba.sds.model.Position;
 
 public class App {
 	
-	private static final double P = 0.8;
+	private static final double P = 0.7;
 	private static final int I = 10000000;
 	
     public static void main( String[] args ){
