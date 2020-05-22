@@ -18,9 +18,12 @@ public class CajaImpl implements Caja {
 	double d;
 	Cajero A = new Cajero();
 	Cajero B = new Cajero();
+	int counterA = 0;
+	int counterB = 0;
 	int max;
-	Queue<Integer> queue = new LinkedList <>();//waiting
-	//paying
+	
+	Queue<Integer> queue = new LinkedList <>();
+	
 	int x = 0;
 	
 	StringBuilder ovito = new StringBuilder();
@@ -58,12 +61,12 @@ public class CajaImpl implements Caja {
 		Position aux = new Position(D,0);
 		this.L = new Position(p.x,p.y);
 		L.substract(aux);
-		L.escalarProduct(1.5/2);
 		this.R = new Position(p.x,p.y);
 		R.add(aux);
-		R.escalarProduct(1.5/2);
 		this.d = d;
 		this.max = max;
+		A.T = 3;
+		B.T = 9;
 	}
 	
 	@Override
@@ -73,7 +76,7 @@ public class CajaImpl implements Caja {
 	}
 	
 	@Override
-	public boolean hasFreeSpace() {
+	public boolean hasFreeSpace(int index) {
 		return queue.size() < max;
 	}
 	
@@ -94,40 +97,23 @@ public class CajaImpl implements Caja {
 	}
 
 	public void atender() {
-		//print(queue);
 		if(!A.ocupado) {
-			ovito.append(this.toOvito());
 			A.work();
-			//System.out.println("A work");
 			queue.poll();
-			print(queue);
-			ovito.append(this.toOvito());
 		}
 		if(!B.ocupado) {
-			ovito.append(this.toOvito());
 			B.work();
-			//System.out.println("B work");
 			queue.poll();
-			print(queue);
-			ovito.append(this.toOvito());
 		}
 		if(A.isDone()) {
 			A.rest();
-			print(queue);
-			ovito.append(this.toOvito());
-			//x = queue.poll();
-			//System.out.println("A rest");
-			//System.out.println(x + " goes home");
-			//System.out.println(A);
+			this.printOvito();
+			counterA++;
 		}
 		if(B.isDone()) {
 			B.rest();
-			print(queue);
-			ovito.append(this.toOvito());
-			//x = queue.poll();
-			//System.out.println("B rest");
-			//System.out.println(x + " goes home");
-			//System.out.println(B);
+			this.printOvito();
+			counterB++;
 		}
 	}
 	
@@ -151,11 +137,13 @@ public class CajaImpl implements Caja {
 		return queue.isEmpty();
 	}
 	
+	public void printOvito() {
+		ovito.append(this.toOvito());
+	}
+	
 	public String toOvito(){
 		StringBuilder str = new StringBuilder();
-		//return "0 " + this.position.toString()+" "+ this.radius + " 1 1 0";
-		//return "0 " +  + "1 1 0";
-		str.append(queue.size() + 2 + 5*(20-5)*2 + "\n");
+		str.append(queue.size() + 2 + "\n");
 		str.append("//\n");
 		if(!A.ocupado) {
 			str.append("-2 " + L + " 0.5 1 0 0 \n");
@@ -169,8 +157,6 @@ public class CajaImpl implements Caja {
 
 			str.append("-1 " + R + " 0.5 0 0 1 \n");
 		}
-			
-			
 		
 		int counter = 0;
 		for(Integer i : this.queue) {
@@ -181,9 +167,22 @@ public class CajaImpl implements Caja {
 			str.append("\n");
 			counter ++;
 		}
-		str.append(App.poligons());
+		//str.append(App.poligons());
 		return str.toString();
     }
+
+	@Override
+	public int whereToGo() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	/*
+	@Override
+	public boolean hasFreeSpace(int index) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	*/
 	
 }
 

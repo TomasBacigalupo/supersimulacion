@@ -2,7 +2,7 @@ package ar.edu.itba.sds.caja;
 
 public class Cajero {
 	boolean ocupado = false;
-	double T =3;
+	double T =3; // Entre 3 y 5,5 minutos segun variable exponencial. Calculo de un lamda. Depende de la cantidad de items.
 	double t = 0;
 	
 	public void work() {
