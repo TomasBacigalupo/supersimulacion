@@ -16,8 +16,8 @@ public class App {
 	private static final int I = 10000000;
 	
     public static void main( String[] args ){
-		File f = new File("output.txt");
-		f.delete();
+		//File f = new File("output.txt");
+		//f.delete();
     	
         System.out.println("Hello World!");
         System.out.println("Driver Class Caja Module\n");
@@ -27,6 +27,8 @@ public class App {
         System.out.println(caja);
         
         boolean flag = false;
+        
+        StringBuilder mergedStr = new StringBuilder("");
         
         int N = 8;
         double delta = 20;
@@ -70,23 +72,32 @@ public class App {
         	}
         	
 	        for(int m = 0 ; m < N ; m++) {
-		        while(!cajas.get(m).isDone()/*TODO: revisar esta condicion ej: dedicarle 30s a cada caja | hacer fork  */) {
+		        while(!cajas.get(m).isDone()) {
 		        	i++;
 		        	if(i%1000000==0) {
 		        		flag = true;
 		        	}
+		        	int size = 0;
+		        	StringBuilder str = new StringBuilder();
 		        	for(int n = 0 ; n < N ; n++) {
 			        	double x = rand.nextDouble();
 			        	if(flag){
 			        		cajas.get(n).printOvito();
+			        		//System.out.println(cajas.get(n).toOvitoBody());
+			        		size = size + cajas.get(n).queue.size() + 2;
+			        		str.append(cajas.get(n).toOvitoBody());
 			        	}
 			        	/*if(x > P && i%I==0) {
 			        		cajas.get(n).add(80);
 			        	}*/
 			        	cajas.get(n).atender();
 		        	}
+
 		        	if(flag) {
+		        		String appender = size + "\n" + "//\n" + str.toString();
 		        		flag = false;
+		        		//System.out.println(appender);
+		        		mergedStr.append(appender);
 		        	}
 			        	
 		        }
@@ -96,6 +107,7 @@ public class App {
 		        System.out.println(cajas.get(n).counterA + "	" + cajas.get(n).counterB);
 		        
 		        write("output" + n + ".txt",cajas.get(n).ovito.toString());
+		        write("outputMerged.txt",mergedStr.toString());
 	        }
 	        
        }
