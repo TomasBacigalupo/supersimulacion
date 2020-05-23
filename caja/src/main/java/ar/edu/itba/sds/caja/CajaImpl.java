@@ -141,10 +141,8 @@ public class CajaImpl implements Caja {
 		ovito.append(this.toOvito());
 	}
 	
-	public String toOvito(){
-		StringBuilder str = new StringBuilder();
-		str.append(queue.size() + 2 + "\n");
-		str.append("//\n");
+	public String toOvitoBody() {
+		StringBuilder str = new StringBuilder("");
 		if(!A.ocupado) {
 			str.append("-2 " + L + " 0.5 1 0 0 \n");
 		}else {
@@ -167,6 +165,14 @@ public class CajaImpl implements Caja {
 			str.append("\n");
 			counter ++;
 		}
+		return str.toString();
+	}
+	
+	public String toOvito(){
+		StringBuilder str = new StringBuilder();
+		str.append(queue.size() + 2 + "\n");
+		str.append("//\n");
+		str.append(this.toOvitoBody());
 		//str.append(App.poligons());
 		return str.toString();
     }
