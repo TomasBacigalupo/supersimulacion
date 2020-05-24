@@ -10,72 +10,54 @@ import ar.edu.itba.sds.model.Position;
 
 public class Cajas {
 	
-	private static final double P = 0.8;
-	private static final int I = 1000000;
+	
 	private static final int N = 8;
     private static final double delta = 20;
-    //run deberia ser init y lo que tengo dentro de run sacando el init es run
     
-    public void run() {
-		boolean flag = false;
-	    StringBuilder mergedStr = new StringBuilder("");
-	    List<CajaImpl> cajas = new ArrayList(N);
+    int i = 0;
+    
+    boolean flag = false;
+    StringBuilder mergedStr = new StringBuilder("");
+    List<CajaImpl> cajas = new ArrayList(N);
+    
+    
+    public void init() {
 	    for(int n = 0 ; n < N ; n++) {
 	    	Position pn = new Position(n*delta,0);
 	    	CajaImpl cajan = new CajaImpl(pn,7.5,5,1.5,8);
 	    	cajas.add(cajan);
-	    } 
-	    Random rand = new Random();
-	    int i = 0;
-	    //----------// ESTO DEBERIA ESTAR EN APP YA QUE NO CORRESPONDE AL METODO RUN DE LAS CAJAS HACER EL ADD, EL ADD LO HACEN LOS METODOS QUE LA LLAMAN!
-	    while(true) {
-	    	for(int n = 0 ; n < N ; n++) {
-	    		cajas.get(n).add(0);
-		        cajas.get(n).add(10);
-		        cajas.get(n).add(20);
-		        cajas.get(n).add(30);
-		        cajas.get(n).add(40);     
-		        cajas.get(n).add(50);
-		        cajas.get(n).add(60);   
-		        cajas.get(n).add(70);      
-		        cajas.get(n).add(50);
-		        cajas.get(n).add(60);
-		        cajas.get(n).add(70);
-	    	}
-	   //----------//
-	        for(int m = 0 ; m < N ; m++) {
-		        while(!cajas.get(m).isDone()) {
-		        	i++;
-		        	if(i%100000==0) {
-		        		flag = true;
+	    }
+    }
+    
+    public void run() {
+        for(int m = 0 ; m < N ; m++) {
+	        while(!cajas.get(m).isDone()) {
+	        	i++;
+	        	if(i%100000==0) {
+	        		flag = true;
+	        	}
+	        	int size = 0;
+	        	StringBuilder str = new StringBuilder();
+	        	for(int n = 0 ; n < N ; n++) {			        	
+		        	if(flag){
+		        		cajas.get(n).printOvito();
+		        		size = size + cajas.get(n).queue.size() + 2;
+		        		str.append(cajas.get(n).toOvitoBody());
 		        	}
-		        	int size = 0;
-		        	StringBuilder str = new StringBuilder();
-		        	for(int n = 0 ; n < N ; n++) {
-			        	double x = rand.nextDouble();
-			        	if(flag){
-			        		cajas.get(n).printOvito();
-			        		size = size + cajas.get(n).queue.size() + 2;
-			        		str.append(cajas.get(n).toOvitoBody());
-			        	}
-			        	if(x > P && i%I==0) {
-			        		cajas.get(n).add(80);
-			        	}
-			        	cajas.get(n).atender();
-		        	}
-		        	if(flag) {
-		        		String appender = size + "\n" + "//\n" + str.toString();
-		        		flag = false;
-		        		mergedStr.append(appender);
-		        	}	
-		        }
+
+		        	cajas.get(n).atender();
+	        	}
+	        	if(flag) {
+	        		String appender = size + "\n" + "//\n" + str.toString();
+	        		flag = false;
+	        		mergedStr.append(appender);
+	        	}	
 	        }
-	        for(int n = 0 ; n < N ; n++) {
-		        System.out.println(cajas.get(n).counterA + "	" + cajas.get(n).counterB);
-		        write("outputMerged.txt",mergedStr.toString());
-	        }
-	        
-	   }
+        }
+        for(int n = 0 ; n < N ; n++) {
+	        System.out.println(cajas.get(n).counterA + "	" + cajas.get(n).counterB);
+	        write("outputMerged.txt",mergedStr.toString());
+        }
    }
    
    static void write (String filename , String value) {
