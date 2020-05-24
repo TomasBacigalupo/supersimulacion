@@ -10,10 +10,11 @@ import ar.edu.itba.sds.model.Position;
 
 public class Cajas {
 	
-	private static final double P = 0.6;
+	private static final double P = 0.8;
 	private static final int I = 1000000;
 	private static final int N = 8;
     private static final double delta = 20;
+    //run deberia ser init y lo que tengo dentro de run sacando el init es run
     
     public void run() {
 		boolean flag = false;
@@ -70,7 +71,7 @@ public class Cajas {
 		        }
 	        }
 	        for(int n = 0 ; n < N ; n++) {
-		        //System.out.println(cajas.get(n).counterA + "	" + cajas.get(n).counterB);
+		        System.out.println(cajas.get(n).counterA + "	" + cajas.get(n).counterB);
 		        write("outputMerged.txt",mergedStr.toString());
 	        }
 	        
