@@ -7,7 +7,7 @@ import java.util.Queue;
 import ar.edu.itba.sds.interfaces.Caja;
 import ar.edu.itba.sds.model.Position;
 
-public class CajaImpl implements Caja {
+public class CajaImpl /*implements Caja*/ {
 	
 	Position p;
 	double D;
@@ -68,33 +68,11 @@ public class CajaImpl implements Caja {
 		B.T = 9;
 	}
 	
-	@Override
 	public Position position(int index) {
 		Position p = new Position(this.p.x , this.p.y + index*this.d + this.H);
 		return p;
 	}
 	
-	@Override
-	public boolean hasFreeSpace(int index) {
-		return queue.size() < max;
-	}
-	
-	@Override
-	public List<Integer> status() {
-		return null;
-	}
-	
-	@Override
-	public String toString() {
-		return String.format("p = %s		L = %s	R = %s	\n",p.toString(),L.toString(),R.toString());
-	}
-	
-	@Override
-	public void add(int elem) {
-		if(queue.size() < max)
-			queue.add(elem);
-	}
-
 	public void atender() {
 		if(!A.ocupado) {
 			A.work();
@@ -175,9 +153,6 @@ public class CajaImpl implements Caja {
 		return str.toString();
     }
 
-	@Override
-	public int whereToGo() {
-		return 0;
-	}	
+		
 }
 

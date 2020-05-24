@@ -6,9 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import ar.edu.itba.sds.interfaces.Caja;
 import ar.edu.itba.sds.model.Position;
 
-public class Cajas {
+public class Cajas implements Caja {
 	
 	
 	private static final int N = 8;
@@ -69,5 +70,37 @@ public class Cajas {
    	      System.out.println("An error occurred.");
    	      e.printStackTrace();
    	    }
-     } 
+     }
+   
+	@Override
+	public Position position(int index) {
+		Position p = new Position(cajas.get(index).position(index).x , cajas.get(index).position(index).y + index*cajas.get(index).d + cajas.get(index).H);
+		return p;
+	}
+	
+	@Override
+	public boolean hasFreeSpace(int index) {
+		return cajas.get(index).queue.size() < N;
+	}
+	
+	@Override
+	public List<Integer> status() {
+		return null;
+	}
+	
+//	@Override
+//	public String toString() {
+//		return String.format("p = %s		L = %s	R = %s	\n",p.toString(),L.toString(),R.toString());
+//	}
+	
+	@Override
+	public void add(int elem , int index) {
+		if(cajas.get(index).queue.size() < N)
+			cajas.get(index).queue.add(elem);
+	}
+	
+	@Override
+	public int whereToGo() {
+		return 0;
+	}
 }

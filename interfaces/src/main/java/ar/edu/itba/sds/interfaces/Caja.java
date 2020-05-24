@@ -10,5 +10,5 @@ public interface Caja {
 	public Position position(int index);
 	public boolean hasFreeSpace(int index);
 	public List<Integer> status();
-	public void add(int index/* , int elems , Agent agent*/);
+	public void add(int index , int elems /* , Agent agent*/);
 }
