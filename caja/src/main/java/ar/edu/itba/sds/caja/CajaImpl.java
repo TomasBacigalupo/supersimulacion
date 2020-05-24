@@ -173,22 +173,12 @@ public class CajaImpl implements Caja {
 		str.append(queue.size() + 2 + "\n");
 		str.append("//\n");
 		str.append(this.toOvitoBody());
-		//str.append(App.poligons());
 		return str.toString();
     }
 
 	@Override
 	public int whereToGo() {
-		// TODO Auto-generated method stub
 		return 0;
-	}
-	/*
-	@Override
-	public boolean hasFreeSpace(int index) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	*/
-	
+	}	
 }
 
