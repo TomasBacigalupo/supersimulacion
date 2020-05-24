@@ -10,22 +10,35 @@ import ar.edu.itba.sds.interfaces.Caja;
 import ar.edu.itba.sds.model.Position;
 
 public class Cajas implements Caja {
+	private int N = 8;
+    private double delta = 20;
+    private double D = 7.5;
+	private double H = 5;
+	private double d = 1;
+	private int max = 8;
 	
-	
-	private static final int N = 8;
-    private static final double delta = 20;
-    
-    int i = 0;
-    
+    private int i = 0;
     boolean flag = false;
     StringBuilder mergedStr = new StringBuilder("");
     List<CajaImpl> cajas = new ArrayList(N);
     
+    public Cajas() {
+    	
+    }
+    
+    public Cajas(int N,double delta,double D,double H,double d,int max) {
+    	this.N = N;
+    	this.delta = delta;
+    	this.D = D;
+    	this.H = H;
+    	this.d = d;
+    	this.max = max;
+    }
     
     public void init() {
 	    for(int n = 0 ; n < N ; n++) {
 	    	Position pn = new Position(n*delta,0);
-	    	CajaImpl cajan = new CajaImpl(pn,7.5,5,1.5,8);
+	    	CajaImpl cajan = new CajaImpl(pn,D,H,d,max);
 	    	cajas.add(cajan);
 	    }
     }
@@ -71,7 +84,7 @@ public class Cajas implements Caja {
    	      e.printStackTrace();
    	    }
      }
-   
+    
 	@Override
 	public Position position(int index) {
 		Position p = new Position(cajas.get(index).position(index).x , cajas.get(index).position(index).y + index*cajas.get(index).d + cajas.get(index).H);
@@ -87,11 +100,6 @@ public class Cajas implements Caja {
 	public List<Integer> status() {
 		return null;
 	}
-	
-//	@Override
-//	public String toString() {
-//		return String.format("p = %s		L = %s	R = %s	\n",p.toString(),L.toString(),R.toString());
-//	}
 	
 	@Override
 	public void add(int elem , int index) {

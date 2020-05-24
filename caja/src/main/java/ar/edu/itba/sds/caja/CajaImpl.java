@@ -19,7 +19,6 @@ public class CajaImpl /*implements Caja*/ {
 	Cajero B = new Cajero();
 	int counterA = 0;
 	int counterB = 0;
-	int max;
 	
 	Queue<Integer> queue = new LinkedList <>();
 	
@@ -63,7 +62,6 @@ public class CajaImpl /*implements Caja*/ {
 		this.R = new Position(p.x,p.y);
 		R.add(aux);
 		this.d = d;
-		this.max = max;
 		A.T = 3;
 		B.T = 9;
 	}
