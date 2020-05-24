@@ -26,6 +26,7 @@ public class Cajas {
 	    } 
 	    Random rand = new Random();
 	    int i = 0;
+	    //----------// ESTO DEBERIA ESTAR EN APP YA QUE NO CORRESPONDE AL METODO RUN DE LAS CAJAS HACER EL ADD, EL ADD LO HACEN LOS METODOS QUE LA LLAMAN!
 	    while(true) {
 	    	for(int n = 0 ; n < N ; n++) {
 	    		cajas.get(n).add(0);
@@ -40,6 +41,7 @@ public class Cajas {
 		        cajas.get(n).add(60);
 		        cajas.get(n).add(70);
 	    	}
+	   //----------//
 	        for(int m = 0 ; m < N ; m++) {
 		        while(!cajas.get(m).isDone()) {
 		        	i++;
@@ -68,7 +70,7 @@ public class Cajas {
 		        }
 	        }
 	        for(int n = 0 ; n < N ; n++) {
-		        System.out.println(cajas.get(n).counterA + "	" + cajas.get(n).counterB);
+		        //System.out.println(cajas.get(n).counterA + "	" + cajas.get(n).counterB);
 		        write("outputMerged.txt",mergedStr.toString());
 	        }
 	        
