@@ -1,19 +1,18 @@
 package ar.edu.itba.sds.caja;
 
 import java.util.LinkedList;
-import java.util.List;
+
 import java.util.Queue;
 
-import ar.edu.itba.sds.interfaces.Caja;
-import ar.edu.itba.sds.model.Position;
+import ar.edu.itba.sds.model.Vector;
 
-public class CajaImpl /*implements Caja*/ {
+public class CajaImpl {
 	
-	Position p;
+	Vector p;
 	double D;
 	double H;
-	Position L;
-	Position R;
+	Vector L;
+	Vector R;
 	double d;
 	Cajero A = new Cajero();
 	Cajero B = new Cajero();
@@ -26,24 +25,24 @@ public class CajaImpl /*implements Caja*/ {
 	
 	StringBuilder ovito = new StringBuilder();
 	
-	public CajaImpl(Position p,double D,double H,double d,int max) {
+	public CajaImpl(Vector p,double D,double H,double d,int max) {
 		/*
 		p is the inception position
 		D is the distance that separates the attention positions
 		
-		|	|	0	|	|
-		|	|	0	|	|
-		|	|	0	|	|
+		|	|	0		|	|
+		|	|	0		|	|
+		|	|	1:id	|	|
 				.
 				.
 				.
-				0 ------------> let x be (x0,y0) then the i-th 0 is (x0,y0 + i*d + H)
+				1:id ------------> let x be (x0,y0) then the i-th 0 is (x0,y0 + i*d + H)
 				.
 				.
 				.
-		|	|	0	|	| -> d
-		|	|	0	|	|
-		|	|	0	|	|
+		|	|	1:id	|	| -> d
+		|	|	1:id	|	|
+		|	|	1:id	|	|
 		-
 		|
 		H
@@ -56,18 +55,18 @@ public class CajaImpl /*implements Caja*/ {
 		this.p = p;
 		this.D = D;
 		this.H = H;
-		Position aux = new Position(D,0);
-		this.L = new Position(p.x,p.y);
+		Vector aux = new Vector(D,0);
+		this.L = new Vector(p.x,p.y);
 		L.substract(aux);
-		this.R = new Position(p.x,p.y);
+		this.R = new Vector(p.x,p.y);
 		R.add(aux);
 		this.d = d;
 		A.T = 3;
 		B.T = 9;
 	}
 	
-	public Position position(int index) {
-		Position p = new Position(this.p.x , this.p.y + index*this.d + this.H);
+	public Vector position(int index) {
+		Vector p = new Vector(this.p.x , this.p.y + index*this.d + this.H);
 		return p;
 	}
 	

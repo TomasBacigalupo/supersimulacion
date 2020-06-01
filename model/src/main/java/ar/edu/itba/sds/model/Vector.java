@@ -1,21 +1,21 @@
 package ar.edu.itba.sds.model;
 
-public class Position {
+public class Vector {
 	
 	public double x;
 	public double y;
 	
-	public Position(double x, double y) {
+	public Vector(double x, double y) {
 		this.x = x;
 		this.y = y;
 	}
 	
-	public void add(Position other) {
+	public void add(Vector other) {
 		this.x += other.x;
 		this.y += other.y;
 	}
 	
-	public void substract(Position other){
+	public void substract(Vector other){
 		this.x -= other.x;
 		this.y -= other.y;
 	}
