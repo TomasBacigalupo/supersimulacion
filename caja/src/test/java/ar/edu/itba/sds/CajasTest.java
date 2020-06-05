@@ -105,7 +105,7 @@ public class CajasTest {
 		// anda a la caja que tiene la menor cantidad de peatones
 		cajas.add(10,0,agents[0]);
 		cajas.add(10,2,agents[1]);
-		status();
+		//status();
 		//System.out.println(cajas.whereToGo());
 		assertEquals(1,cajas.whereToGo());
 	}

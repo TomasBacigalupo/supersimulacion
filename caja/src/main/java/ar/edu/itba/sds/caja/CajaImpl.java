@@ -3,6 +3,7 @@ package ar.edu.itba.sds.caja;
 import java.util.LinkedList;
 
 import java.util.Queue;
+import java.util.concurrent.TimeUnit;
 
 import ar.edu.itba.sds.model.Vector;
 
@@ -19,7 +20,8 @@ public class CajaImpl {
 	int counterA = 0;
 	int counterB = 0;
 	
-	Queue<Integer> queue = new LinkedList <>();
+	Queue<Integer> queue  = new LinkedList <>();
+	Queue<Integer> paying = new LinkedList <>();
 	
 	int x = 0;
 	
@@ -72,27 +74,55 @@ public class CajaImpl {
 	
 	public void atender() {
 		if(!A.ocupado) {
-			A.work();
-			queue.poll();
+			Integer a = queue.poll();
+			if(a!=null) {
+				A.work();
+				paying.add(a);
+			};
 		}
 		if(!B.ocupado) {
-			B.work();
-			queue.poll();
+			Integer b = queue.poll();
+			if(b!=null) {
+				B.work();
+				paying.add(b);
+			};
 		}
 		if(A.isDone()) {
 			A.rest();
-			this.printOvito();
-			counterA++;
+			//this.printOvito();
+			Integer p = paying.poll();
+			if(p!=null) {
+				this.print();
+				System.out.println("----------------------------------------------");
+				counterA++;
+			}
 		}
 		if(B.isDone()) {
 			B.rest();
-			this.printOvito();
-			counterB++;
+			//this.printOvito();
+			Integer p = paying.poll();
+			if(p!=null) {
+				this.print();
+				System.out.println("----------------------------------------------");
+				counterB++;
+			}
 		}
 	}
 	
 	public void print() {
 		print(this.queue);
+		printPaying();
+	}
+	
+	public void printPaying() {
+		int counter = 0;
+		for(Integer i : paying) {
+			//System.out.print(this.position(counter) + " ");
+			//System.out.print(counter + " ");
+			System.out.print("x ");
+			counter ++;
+		}
+		System.out.println();
 	}
 	
 	private void print(Queue<Integer> q) {
@@ -101,14 +131,21 @@ public class CajaImpl {
 		System.out.print("[");
 		int counter = 0;
 		for(Integer i : q) {
-			System.out.print(this.position(counter) + " ");
+			//System.out.print(this.position(counter) + " ");
+			//System.out.print(counter + " ");
+			System.out.print("x ");
 			counter ++;
 		}
 		System.out.println("]");
 	}
 
 	public boolean isDone() {
-		return queue.isEmpty();
+		boolean ret =  queue.isEmpty() && paying.isEmpty() && A.ocupado==false && B.ocupado==false;
+		if(ret) {
+			this.print();
+			System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+		}
+		return ret;
 	}
 	
 	public void printOvito() {

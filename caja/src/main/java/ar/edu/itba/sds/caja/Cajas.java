@@ -84,6 +84,7 @@ public class Cajas implements Caja {
 		        		cajas.get(n).printOvito();
 		        		size = size + cajas.get(n).queue.size() + 2;
 		        		str.append(cajas.get(n).toOvitoBody());
+		        		//cajas.get(n).print();
 		        	}
 
 		        	cajas.get(n).atender();
