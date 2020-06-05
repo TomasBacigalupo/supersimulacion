@@ -14,14 +14,12 @@ public class App {
     	int N = 8;
         System.out.println("Hello World!");
         System.out.println("Driver Class Caja Module\n");
-        Cajas cajas = new Cajas();
-        //cajas.init();
-        //Cajas cajas = Cajas.getInstance();
+        //Cajas cajas = new Cajas();
+        Cajas cajas = Cajas.getInstance();
         Random rand = new Random();
         
         //------------------------------------//
         int AGENTS = 100;
-        Agent agent = new Agent();
         List<Agent> agents = new ArrayList<>();
         for(int i = 0 ; i < AGENTS ; i++) {
         	Agent aux = new Agent();
@@ -45,16 +43,12 @@ public class App {
 	    		cons++;
 	    		double x = rand.nextDouble();
 	        	if(x > P) {
-	        		//cajas.add(80,n);
 	        		int index = cajas.whereToGo();
 	        		System.out.println("Agrego en la caja " + index);
 	        		cajas.add(80,index,agents.get(cons));
 	        		cons++;
 	        	}
 	    	}
-	        /*
-	        Llamada a whereToGo ?
-	        */
 	        cajas.whereToGo();
 	        String status = cajas.status();
 	        System.out.println(status);

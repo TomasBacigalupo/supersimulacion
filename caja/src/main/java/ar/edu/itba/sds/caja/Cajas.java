@@ -24,7 +24,7 @@ public class Cajas implements Caja {
     StringBuilder mergedStr = new StringBuilder("");
     public List<CajaImpl> cajas = new ArrayList<>(N);
     
-    Cajas singleton;
+    static Cajas singleton;
     
     public Cajas() {
     	// Hay que llamar a Geometria para obtener los parametros
@@ -45,9 +45,13 @@ public class Cajas implements Caja {
     public Cajas(List<Vector> payingPositions , double distanceBetweenCajas) {
     	/*
     	payingPositions = [L0,R0,L1,R1,L2,R2,...,Ln,Rn];
+    	
     	N , la cantidad de cajas , seria payingPositions.length / 2;
+    	
     	D = R0 - L0;
+    	
     	p // punto inception de la paremetrización de cada caja
+    	
     	delta = distanceBetweenCajas;
     	*/
     }
@@ -150,17 +154,13 @@ public class Cajas implements Caja {
 	public int whereToGo() {
 		int index = 0;
 		int minl = Integer.MAX_VALUE;
-		
 		for(int i = 0 ; i < N ; i++) {
 			int l = cajas.get(i).queue.size();
-			//System.out.println(String.format("La caja nro. %d tiene %d elementos",i,l));
 			if(minl > l) {
-				//System.out.println( minl +  " > " + l);
 				minl = l;
 				index = i;
 			}
 		}
-		
 		return index;
 	}
 
@@ -171,11 +171,7 @@ public class Cajas implements Caja {
 			int placeInCaja = 0;
 			for(Integer id : cajas.get(i).queue) {
 				if(id==agentid) {
-					//ret = new Vector(cajas.get(i).position(i).x , cajas.get(i).position(i).y + i*cajas.get(i).d + cajas.get(i).H);
-					//double x = cajas.get(i).position(i).x;
-					//double y = cajas.get(i).position(i).y;
 					Vector vec = this.cajas.get(i).position(placeInCaja);
-					//ret = new Vector(x,y);
 					ret = vec;
 					return ret;
 				}
@@ -184,8 +180,8 @@ public class Cajas implements Caja {
 		}
 		return null;
 	}
-	@Override
-	public Cajas getInstance() {
+
+	public static Cajas getInstance() {
 		if (singleton == null)
 	          singleton=new Cajas();
 	      return singleton;

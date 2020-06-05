@@ -89,7 +89,7 @@ public class CajaImpl {
 		}
 		if(A.isDone()) {
 			A.rest();
-			//this.printOvito();
+			//this.printOvito();//StringBuilder goes full and throws out of heap exception
 			Integer p = paying.poll();
 			if(p!=null) {
 				this.print();
@@ -99,7 +99,7 @@ public class CajaImpl {
 		}
 		if(B.isDone()) {
 			B.rest();
-			//this.printOvito();
+			//this.printOvito();//StringBuilder goes full and throws out of heap exception
 			Integer p = paying.poll();
 			if(p!=null) {
 				this.print();
@@ -117,8 +117,6 @@ public class CajaImpl {
 	public void printPaying() {
 		int counter = 0;
 		for(Integer i : paying) {
-			//System.out.print(this.position(counter) + " ");
-			//System.out.print(counter + " ");
 			System.out.print("x ");
 			counter ++;
 		}
@@ -131,8 +129,6 @@ public class CajaImpl {
 		System.out.print("[");
 		int counter = 0;
 		for(Integer i : q) {
-			//System.out.print(this.position(counter) + " ");
-			//System.out.print(counter + " ");
 			System.out.print("x ");
 			counter ++;
 		}
