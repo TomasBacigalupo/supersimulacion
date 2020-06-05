@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import ar.edu.itba.sds.caja.Cajas;
 import ar.edu.itba.sds.model.Agent;
+import ar.edu.itba.sds.model.Vector;
 
 public class CajasTest {
 	/*
@@ -108,6 +109,15 @@ public class CajasTest {
 		//status();
 		//System.out.println(cajas.whereToGo());
 		assertEquals(1,cajas.whereToGo());
+	}
+	
+	@Test
+	public void positionTest() {
+		status();
+		cajas.add(10, 5, agents[0]);
+		status();
+		Vector pos = cajas.position(5);
+		System.out.println(pos);
 	}
 	
 	private void status() {

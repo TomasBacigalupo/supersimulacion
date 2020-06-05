@@ -133,7 +133,9 @@ public class Cajas implements Caja {
    
 	@Override
 	public Vector position(int index) {
-		Vector p = new Vector(cajas.get(index).position(index).x , cajas.get(index).position(index).y + index*cajas.get(index).d + cajas.get(index).H);
+		int n = cajas.get(index).queue.size();
+		//Vector p = new Vector(cajas.get(index).position(index).x , cajas.get(index).position(index).y + n*cajas.get(index).d + cajas.get(index).H);
+		Vector p = cajas.get(index).position(n);
 		return p;
 	}
 	
