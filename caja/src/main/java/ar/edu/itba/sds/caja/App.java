@@ -27,7 +27,7 @@ public class App {
         	agents.add(aux);
         }
         //------------------------------------//
-        
+        int generados = 0;
         while(true) {
         	int cons = 0;
 	        for(int n = 0 ; n < N ; n++) {
@@ -49,10 +49,12 @@ public class App {
 	        		cons++;
 	        	}
 	    	}
+	        generados += cons;
 	        cajas.whereToGo();
 	        String status = cajas.status();
 	        System.out.println(status);
 	        cajas.run();
+	        System.out.println("Generados: " + generados);
         }
     }
     public static int getRandomNumberInRange(int min, int max) {
