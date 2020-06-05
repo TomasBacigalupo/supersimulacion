@@ -58,7 +58,7 @@ public class CajasTest {
 		assertNull(cajas.getPositionOf(8));
 	}
 	
-	@Test 
+	//@Test 
 	public void getPositionOfTest() {
 		//status();
 		//cajas.add(elem, index, agent);// ----> It would be just cleaner if we just do cajas.add(agent);
@@ -98,6 +98,16 @@ public class CajasTest {
 		//status();
 		//System.out.println(cajas.getPositionOf(0));
 		assertNull(cajas.getPositionOf(0));
+	}
+	
+	@Test
+	public void whereToGo() {
+		// anda a la caja que tiene la menor cantidad de peatones
+		cajas.add(10,0,agents[0]);
+		cajas.add(10,2,agents[1]);
+		status();
+		//System.out.println(cajas.whereToGo());
+		assertEquals(1,cajas.whereToGo());
 	}
 	
 	private void status() {

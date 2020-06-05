@@ -2,9 +2,11 @@ package ar.edu.itba.sds.caja;
 
 import java.io.FileWriter;
 
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 import ar.edu.itba.sds.interfaces.Caja;
 import ar.edu.itba.sds.model.Agent;
 import ar.edu.itba.sds.model.Vector;
@@ -150,7 +152,7 @@ public class Cajas implements Caja {
 		
 		for(int i = 0 ; i < N ; i++) {
 			int l = cajas.get(i).queue.size();
-			System.out.println(String.format("La caja nro. %d tiene %d elementos",i,l));
+			//System.out.println(String.format("La caja nro. %d tiene %d elementos",i,l));
 			if(minl > l) {
 				//System.out.println( minl +  " > " + l);
 				minl = l;
