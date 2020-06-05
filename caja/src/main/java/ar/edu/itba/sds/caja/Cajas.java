@@ -20,7 +20,7 @@ public class Cajas implements Caja {
     private int i = 0;
     boolean flag = false;
     StringBuilder mergedStr = new StringBuilder("");
-    List<CajaImpl> cajas = new ArrayList<>(N);
+    public List<CajaImpl> cajas = new ArrayList<>(N);
     
     Cajas singleton;
     

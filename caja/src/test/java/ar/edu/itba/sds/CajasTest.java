@@ -11,7 +11,6 @@ import ar.edu.itba.sds.model.Agent;
 public class CajasTest {
 	/*
 	Tiene parámetros por default
-	
 	*/
 	Cajas cajas = new Cajas();
 	
@@ -38,15 +37,15 @@ public class CajasTest {
 		status();
 	}
 	
-	//@Test
+	@Test
 	public void addTest() {
-		
+		cajas.add(10,0,agents[0]);
+		assertTrue(0==cajas.getPositionOf(0).x);
+		assertTrue(5==cajas.getPositionOf(0).y);
 	}
 	
-	//@Test 
-	public void getPositionOfTest() {
-		//status();
-		//cajas.add(elem, index, agent);// ----> It would be just cleaner if we just do cajas.add(agent);
+	@Test
+	public void addWhenItIsFullTest() {
 		cajas.add(10,0,agents[0]);
 		cajas.add(10,0,agents[1]);
 		cajas.add(10,0,agents[2]);
@@ -56,11 +55,36 @@ public class CajasTest {
 		cajas.add(10,0,agents[6]);
 		cajas.add(10,0,agents[7]);
 		cajas.add(10,0,agents[8]);
+		assertNull(cajas.getPositionOf(8));
+	}
+	
+	@Test 
+	public void getPositionOfTest() {
+		//status();
+		//cajas.add(elem, index, agent);// ----> It would be just cleaner if we just do cajas.add(agent);
+		//este test no falla siempre y cuando tenga los parametros de las cajas dados
+		cajas.add(10,0,agents[0]);
+		cajas.add(10,0,agents[1]);
+		cajas.add(10,0,agents[2]);
+		cajas.add(10,1,agents[3]);
+		cajas.add(10,1,agents[4]);
+		cajas.add(10,1,agents[5]);
+		cajas.add(10,2,agents[6]);
+		cajas.add(10,2,agents[7]);
+		cajas.add(10,3,agents[8]);
 		status();
 		System.out.println(cajas.getPositionOf(0));
+		assertTrue(0==cajas.getPositionOf(0).x);
+		assertTrue(5==cajas.getPositionOf(0).y);
 		System.out.println(cajas.getPositionOf(1));
+		assertTrue(0==cajas.getPositionOf(1).x);
+		assertTrue(7==cajas.getPositionOf(1).y);
 		System.out.println(cajas.getPositionOf(2));
+		assertTrue(0==cajas.getPositionOf(2).x);
+		assertTrue(9==cajas.getPositionOf(2).y);
 		System.out.println(cajas.getPositionOf(3));
+		assertTrue(20==cajas.getPositionOf(3).x);
+		assertTrue(5==cajas.getPositionOf(3).y);
 		System.out.println(cajas.getPositionOf(4));
 		System.out.println(cajas.getPositionOf(5));
 		System.out.println(cajas.getPositionOf(6));
