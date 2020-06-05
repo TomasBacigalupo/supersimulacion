@@ -31,7 +31,6 @@ public class CajasTest {
 	//@Test
 	public void statusTest() {
 		status();
-		//cajas.add(elem, index, agent);// ----> It would be just cleaner if we just do cajas.add(agent);
 		Agent agent = new Agent();
 		agent.id = 9;
 		cajas.add(10,3,agent);
