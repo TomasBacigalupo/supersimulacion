@@ -27,7 +27,6 @@ public class CajaImpl implements Caja {
     static CajaImpl singleton;
     
     public CajaImpl() {
-    	// Hay que llamar a Geometria para obtener los parametros
     	/*
     	Geometry g = new Geometry();
     	
@@ -134,7 +133,6 @@ public class CajaImpl implements Caja {
 	@Override
 	public Vector position(int index) {
 		int n = cajas.get(index).queue.size();
-		//Vector p = new Vector(cajas.get(index).position(index).x , cajas.get(index).position(index).y + n*cajas.get(index).d + cajas.get(index).H);
 		Vector p = cajas.get(index).position(n);
 		return p;
 	}
@@ -147,7 +145,6 @@ public class CajaImpl implements Caja {
 	@Override
 	public void add(int elem , int index , Agent agent) {
 		if(cajas.get(index).queue.size() < N) {
-			//cajas.get(index).queue.add(elem);
 			cajas.get(index).queue.add(agent.id);
 		}
 	}

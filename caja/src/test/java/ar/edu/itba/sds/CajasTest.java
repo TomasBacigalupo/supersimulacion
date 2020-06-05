@@ -11,7 +11,7 @@ import ar.edu.itba.sds.model.Vector;
 
 public class CajasTest {
 	/*
-	Tiene parámetros por default
+	Tiene parámetros por default!
 	*/
 	CajaImpl cajas = new CajaImpl();
 	
@@ -61,8 +61,6 @@ public class CajasTest {
 	//@Test 
 	public void getPositionOfTest() {
 		//status();
-		//cajas.add(elem, index, agent);// ----> It would be just cleaner if we just do cajas.add(agent);
-		//este test no falla siempre y cuando tenga los parametros de las cajas dados
 		cajas.add(10,0,agents[0]);
 		cajas.add(10,0,agents[1]);
 		cajas.add(10,0,agents[2]);
@@ -102,7 +100,6 @@ public class CajasTest {
 	
 	@Test
 	public void whereToGo() {
-		// anda a la caja que tiene la menor cantidad de peatones
 		cajas.add(10,0,agents[0]);
 		cajas.add(10,2,agents[1]);
 		//status();
