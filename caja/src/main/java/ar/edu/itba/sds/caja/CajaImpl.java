@@ -28,18 +28,18 @@ public class CajaImpl implements Caja {
     
     public CajaImpl() {
     	// Hay que llamar a Geometria para obtener los parametros
-    	
     	/*
-    	
     	Geometry g = new Geometry();
     	
     	List<Vector> list = g.getPayingPositions();
     	
+    	this.N = list.length / 2;
+    	
     	double delta = getDistanceBetweenCajas();
     	
+    	this.D = list[1] - list[0];    	
     	*/
-    	
-    	init();// sin esta linea obtenemos un java.lang.IndexOutOfBoundsException
+    	init();
     }
     
     public CajaImpl(List<Vector> payingPositions , double distanceBetweenCajas) {
