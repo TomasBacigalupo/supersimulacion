@@ -41,7 +41,13 @@ public class Cajas implements Caja {
     }
     
     public Cajas(List<Vector> payingPositions , double distanceBetweenCajas) {
-    	
+    	/*
+    	payingPositions = [L0,R0,L1,R1,L2,R2,...,Ln,Rn];
+    	N , la cantidad de cajas , seria payingPositions.length / 2;
+    	D = R0 - L0;
+    	p // punto inception de la paremetrización de cada caja
+    	delta = distanceBetweenCajas;
+    	*/
     }
     
     public Cajas(int N,double delta,double D,double H,double d,int max) {

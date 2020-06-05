@@ -1,5 +1,8 @@
 package ar.edu.itba.sds;
 
+import static org.junit.Assert.*;
+
+import org.junit.Before;
 import org.junit.Test;
 
 import ar.edu.itba.sds.caja.Cajas;
@@ -12,7 +15,18 @@ public class CajasTest {
 	*/
 	Cajas cajas = new Cajas();
 	
+	private int N = 10;
 	
+	Agent[] agents = new Agent[N];
+	
+	@Before
+	public void setUp() {
+		for(int i = 0 ; i < N ; i++) {
+			Agent aux = new Agent();
+			aux.id = i;
+			agents[i] = aux;
+		}
+	}
 	
 	//@Test
 	public void statusTest() {
@@ -29,24 +43,37 @@ public class CajasTest {
 		
 	}
 	
-	@Test 
+	//@Test 
 	public void getPositionOfTest() {
 		//status();
 		//cajas.add(elem, index, agent);// ----> It would be just cleaner if we just do cajas.add(agent);
-		Agent agent1 = new Agent();
-		agent1.id = 1;
-		cajas.add(10,0,agent1);
-		Agent agent2 = new Agent();
-		agent2.id = 2;
-		cajas.add(10,0,agent2);
+		cajas.add(10,0,agents[0]);
+		cajas.add(10,0,agents[1]);
+		cajas.add(10,0,agents[2]);
+		cajas.add(10,0,agents[3]);
+		cajas.add(10,0,agents[4]);
+		cajas.add(10,0,agents[5]);
+		cajas.add(10,0,agents[6]);
+		cajas.add(10,0,agents[7]);
+		cajas.add(10,0,agents[8]);
 		status();
+		System.out.println(cajas.getPositionOf(0));
 		System.out.println(cajas.getPositionOf(1));
 		System.out.println(cajas.getPositionOf(2));
+		System.out.println(cajas.getPositionOf(3));
+		System.out.println(cajas.getPositionOf(4));
+		System.out.println(cajas.getPositionOf(5));
+		System.out.println(cajas.getPositionOf(6));
+		System.out.println(cajas.getPositionOf(7));
+		System.out.println(cajas.getPositionOf(8));
 	}
 	
-	//@Test
+	@Test
 	public void getPositionOfNotFoundTest() {
-		
+		cajas.add(10,5,agents[8]);
+		//status();
+		//System.out.println(cajas.getPositionOf(0));
+		assertNull(cajas.getPositionOf(0));
 	}
 	
 	private void status() {
