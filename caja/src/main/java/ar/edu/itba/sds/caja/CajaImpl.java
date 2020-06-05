@@ -30,19 +30,19 @@ public class CajaImpl {
 		p is the inception position
 		D is the distance that separates the attention positions
 		
-		|	|	0		|	|
-		|	|	0		|	|
-		|	|	1:id	|	|
+		|	|	null	|	|
+		|	|	null	|	|
+		|	|	id4		|	|
 				.
 				.
 				.
-				1:id ------------> let x be (x0,y0) then the i-th 0 is (x0,y0 + i*d + H)
+				id3		------------> let x be (x0,y0) then the i-th 0 is (x0,y0 + i*d + H)
 				.
 				.
 				.
-		|	|	1:id	|	| -> d
-		|	|	1:id	|	|
-		|	|	1:id	|	|
+		|	|	id2		|	| -> d
+		|	|	id1		|	|
+		|	|	id0		|	|
 		-
 		|
 		H
@@ -50,7 +50,7 @@ public class CajaImpl {
 		-
 		--L--	x	 --R--
 		
-			   |p|-----D--|
+			   |p|----D---|
 		*/
 		this.p = p;
 		this.D = D;

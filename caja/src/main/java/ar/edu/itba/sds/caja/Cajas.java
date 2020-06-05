@@ -14,7 +14,7 @@ public class Cajas implements Caja {
     private double delta = 20; // Separacion entre el punto p que parametriza cada caja
     private double D = 7.5;// Distancia de separación entre cajas
 	private double H = 5;// Distancia social interno de la caja
-	private double d = 1;// Distancia social interno de la caja
+	private double d = 2;// Distancia social interno de la caja
 	private int max = 8;// Máxima capacidad de cada fila interno de la caja
 	
     private int i = 0;
@@ -37,7 +37,11 @@ public class Cajas implements Caja {
     	
     	*/
     	
-    	init();
+    	init();// sin esta linea obtenemos un java.lang.IndexOutOfBoundsException
+    }
+    
+    public Cajas(List<Vector> payingPositions , double distanceBetweenCajas) {
+    	
     }
     
     public Cajas(int N,double delta,double D,double H,double d,int max) {
@@ -78,6 +82,8 @@ public class Cajas implements Caja {
 	        	}
 	        	if(flag) {
 	        		String appender = size + "\n" + "//\n" + str.toString();
+//	        		String status = this.status();
+//	    	        System.out.println(status);
 	        		flag = false;
 	        		mergedStr.append(appender);
 	        	}	
@@ -151,13 +157,21 @@ public class Cajas implements Caja {
 
 	@Override
 	public Vector getPositionOf(int agentid) {
+		Vector ret = null;
 		for(int i = 0 ; i < N ; i++) {
+			int placeInCaja = 0;
 			for(Integer id : cajas.get(i).queue) {
 				if(id==agentid) {
-					//
+					//ret = new Vector(cajas.get(i).position(i).x , cajas.get(i).position(i).y + i*cajas.get(i).d + cajas.get(i).H);
+					//double x = cajas.get(i).position(i).x;
+					//double y = cajas.get(i).position(i).y;
+					Vector vec = this.cajas.get(i).position(placeInCaja);
+					//ret = new Vector(x,y);
+					ret = vec;
+					return ret;
 				}
+				placeInCaja++;
 			}
-			
 		}
 		return null;
 	}
