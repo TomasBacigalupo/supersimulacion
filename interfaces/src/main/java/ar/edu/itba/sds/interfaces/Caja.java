@@ -9,4 +9,5 @@ public interface Caja {
 	public boolean hasFreeSpace(int index);
 	public void add(int index , int elems  , Agent agent);
 	public Vector getPositionOf(int agentid);
+	public int atendidos();
 }

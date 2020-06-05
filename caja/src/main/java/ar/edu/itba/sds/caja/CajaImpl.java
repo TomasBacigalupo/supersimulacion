@@ -26,6 +26,8 @@ public class CajaImpl implements Caja {
     
     static CajaImpl singleton;
     
+    public int atendidos = 0;
+    
     public CajaImpl() {
     	/*
     	Geometry g = new Geometry();
@@ -101,10 +103,14 @@ public class CajaImpl implements Caja {
 	        	}	
 	        }
         }
+        int atendidosEstaVuelta = 0;
         for(int n = 0 ; n < N ; n++) {
 	        System.out.println(cajas.get(n).counterA + "	" + cajas.get(n).counterB);
+	        atendidosEstaVuelta += cajas.get(n).counterA + cajas.get(n).counterB;
 	        write("outputMerged.txt",mergedStr.toString());
         }
+        atendidos=atendidosEstaVuelta;
+        System.out.println("Atendidos: " + atendidos + "---------------------------------||||||||||||||||||||||||||||||");
    }
    
    static void write (String filename , String value) {
@@ -184,5 +190,10 @@ public class CajaImpl implements Caja {
 		if (singleton == null)
 	          singleton=new CajaImpl();
 	      return singleton;
+	}
+
+	@Override
+	public int atendidos() {
+		return atendidos;
 	}
 }
