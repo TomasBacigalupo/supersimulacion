@@ -15,7 +15,7 @@ public class App {
         System.out.println("Hello World!");
         System.out.println("Driver Class Caja Module\n");
         //Cajas cajas = new Cajas();
-        Cajas cajas = Cajas.getInstance();
+        CajaImpl cajas = CajaImpl.getInstance();
         Random rand = new Random();
         
         //------------------------------------//

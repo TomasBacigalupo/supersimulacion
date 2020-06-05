@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import ar.edu.itba.sds.caja.Cajas;
+import ar.edu.itba.sds.caja.CajaImpl;
 import ar.edu.itba.sds.model.Agent;
 import ar.edu.itba.sds.model.Vector;
 
@@ -13,7 +13,7 @@ public class CajasTest {
 	/*
 	Tiene parámetros por default
 	*/
-	Cajas cajas = new Cajas();
+	CajaImpl cajas = new CajaImpl();
 	
 	private int N = 10;
 	
