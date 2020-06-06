@@ -9,7 +9,7 @@ import ar.edu.itba.sds.caja.CajaImpl;
 import ar.edu.itba.sds.model.Agent;
 import ar.edu.itba.sds.model.Vector;
 
-public class CajasTest {
+public class CajaImplTest {
 	/*
 	Tiene parámetros por default!
 	*/
