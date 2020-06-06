@@ -120,9 +120,11 @@ public class CajaImplTest {
 	public void atendidosTest() {
 		cajas.add(10, 0, agents[9]);
 		cajas.add(10, 0, agents[9]);
+		cajas.add(10, 0, agents[0]);
+		cajas.add(10, 0, agents[1]);
 		status();
 		cajas.run();
-		assertEquals(2,cajas.atendidos());
+		assertEquals(4,cajas.atendidos());
 	}
 	
 	private void status() {

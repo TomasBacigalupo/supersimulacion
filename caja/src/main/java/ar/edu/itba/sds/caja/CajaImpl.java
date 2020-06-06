@@ -30,7 +30,8 @@ public class CajaImpl implements Caja {
     
     public CajaImpl() {
     	/*
-    	Geometry g = new Geometry();
+    	
+    	Geometry g = Geometry.getInstance();
     	
     	List<Vector> list = g.getPayingPositions();
     	
