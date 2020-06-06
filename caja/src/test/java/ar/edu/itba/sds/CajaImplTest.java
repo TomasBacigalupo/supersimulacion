@@ -109,11 +109,20 @@ public class CajaImplTest {
 	
 	@Test
 	public void positionTest() {
-		status();
+		//status();
 		cajas.add(10, 5, agents[0]);
-		status();
+		//status();
 		Vector pos = cajas.position(5);
-		System.out.println(pos);
+		//System.out.println(pos);
+	}
+	
+	@Test
+	public void atendidosTest() {
+		cajas.add(10, 0, agents[9]);
+		cajas.add(10, 0, agents[9]);
+		status();
+		cajas.run();
+		assertEquals(2,cajas.atendidos());
 	}
 	
 	private void status() {

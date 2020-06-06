@@ -20,8 +20,9 @@ public class CajaAux {
 	int counterA = 0;
 	int counterB = 0;
 	
-	Queue<Integer> queue  = new LinkedList <>();
-	Queue<Integer> paying = new LinkedList <>();
+	Queue<Integer> queue   = new LinkedList <>();
+	Queue<Integer> payingA = new LinkedList <>();
+	Queue<Integer> payingB = new LinkedList<> (); 
 	
 	int x = 0;
 	
@@ -76,22 +77,25 @@ public class CajaAux {
 		if(!A.ocupado) {
 			Integer a = queue.poll();
 			if(a!=null) {
+				System.out.println("A " + a);
 				A.work();
-				paying.add(a);
+				payingA.add(a);
 			};
 		}
 		if(!B.ocupado) {
 			Integer b = queue.poll();
 			if(b!=null) {
+				System.out.println("B " + b);
 				B.work();
-				paying.add(b);
+				payingB.add(b);
 			};
 		}
 		if(A.isDone()) {
 			A.rest();
 			//this.printOvito();//StringBuilder goes full and throws out of heap exception
-			Integer p = paying.poll();
+			Integer p = payingA.poll();
 			if(p!=null) {
+				System.out.println("A payed " + p);
 				this.print();
 				System.out.println("----------------------------------------------");
 				counterA++;
@@ -100,8 +104,9 @@ public class CajaAux {
 		if(B.isDone()) {
 			B.rest();
 			//this.printOvito();//StringBuilder goes full and throws out of heap exception
-			Integer p = paying.poll();
+			Integer p = payingB.poll();
 			if(p!=null) {
+				System.out.println("B payed " + p);
 				this.print();
 				System.out.println("----------------------------------------------");
 				counterB++;
@@ -115,8 +120,15 @@ public class CajaAux {
 	}
 	
 	public void printPaying() {
-		int counter = 0;
-		for(Integer i : paying) {
+		int counter;
+		counter = 0;
+		for(Integer i : payingA) {
+			System.out.print("x ");
+			counter ++;
+		}
+		System.out.println();
+		counter = 0;
+		for(Integer i : payingB) {
 			System.out.print("x ");
 			counter ++;
 		}
@@ -136,7 +148,7 @@ public class CajaAux {
 	}
 
 	public boolean isDone() {
-		boolean ret =  queue.isEmpty() && paying.isEmpty() && A.ocupado==false && B.ocupado==false;
+		boolean ret =  queue.isEmpty() && payingA.isEmpty() && payingB.isEmpty() && A.ocupado==false && B.ocupado==false;
 		if(ret) {
 			this.print();
 			System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");

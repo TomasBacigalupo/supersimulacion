@@ -47,6 +47,10 @@ public class CajaImpl implements Caja {
     	/*
     	payingPositions = [L0,R0,L1,R1,L2,R2,...,Ln,Rn];
     	
+    	o tambien podria ser
+    	
+    	payingPositions = [P0 , P1 , P2 , ... , Pn];
+    	
     	N , la cantidad de cajas , seria payingPositions.length / 2;
     	
     	D = R0 - L0;
