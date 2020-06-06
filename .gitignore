@@ -6,3 +6,4 @@ out/*
 target/*
 caja/output*.txt
 caja/mergedOutput.txt
+bitbucket.txt
