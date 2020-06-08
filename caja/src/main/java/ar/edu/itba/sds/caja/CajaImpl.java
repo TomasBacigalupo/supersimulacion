@@ -9,7 +9,7 @@ import java.util.List;
 
 import ar.edu.itba.sds.interfaces.Caja;
 import ar.edu.itba.sds.model.Agent;
-import ar.edu.itba.sds.model.Vector;
+import ar.edu.itba.sds.model.VectorFila;
 
 public class CajaImpl implements Caja {
 	private int N = 8;// Cantidad de cajas
@@ -44,7 +44,7 @@ public class CajaImpl implements Caja {
     	init();
     }
     
-    public CajaImpl(List<Vector> payingPositions , double distanceBetweenCajas) {
+    public CajaImpl(List<Double> payingPositions , double distanceBetweenCajas) {
     	/*
     	payingPositions = [L0,R0,L1,R1,L2,R2,...,Ln,Rn];
     	
@@ -74,7 +74,7 @@ public class CajaImpl implements Caja {
     
     public void init() {
 	    for(int n = 0 ; n < N ; n++) {
-	    	Vector pn = new Vector(n*delta,0);
+	    	VectorFila pn = new VectorFila(n*delta,0);
 	    	CajaAux cajan = new CajaAux(pn,D,H,d,max);
 	    	cajas.add(cajan);
 	    }
@@ -142,9 +142,9 @@ public class CajaImpl implements Caja {
    }
    
 	@Override
-	public Vector position(int index) {
+	public VectorFila position(int index) {
 		int n = cajas.get(index).queue.size();
-		Vector p = cajas.get(index).position(n);
+		VectorFila p = cajas.get(index).position(n);
 		return p;
 	}
 	
@@ -175,13 +175,13 @@ public class CajaImpl implements Caja {
 	}
 
 	@Override
-	public Vector getPositionOf(int agentid) {
-		Vector ret = null;
+	public VectorFila getPositionOf(int agentid) {
+		VectorFila ret = null;
 		for(int i = 0 ; i < N ; i++) {
 			int placeInCaja = 0;
 			for(Integer id : cajas.get(i).queue) {
 				if(id==agentid) {
-					Vector vec = this.cajas.get(i).position(placeInCaja);
+					VectorFila vec = this.cajas.get(i).position(placeInCaja);
 					ret = vec;
 					return ret;
 				}

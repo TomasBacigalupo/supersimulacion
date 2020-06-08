@@ -5,15 +5,15 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.TimeUnit;
 
-import ar.edu.itba.sds.model.Vector;
+import ar.edu.itba.sds.model.VectorFila;
 
 public class CajaAux {
 	
-	Vector p;
+	VectorFila p;
 	double D;
 	double H;
-	Vector L;
-	Vector R;
+	VectorFila L;
+	VectorFila R;
 	double d;
 	Cajero A = new Cajero();
 	Cajero B = new Cajero();
@@ -28,7 +28,7 @@ public class CajaAux {
 	
 	StringBuilder ovito = new StringBuilder();
 	
-	public CajaAux(Vector p,double D,double H,double d,int max) {
+	public CajaAux(VectorFila p,double D,double H,double d,int max) {
 		/*
 		p is the inception position
 		D is the distance that separates the attention positions
@@ -58,18 +58,18 @@ public class CajaAux {
 		this.p = p;
 		this.D = D;
 		this.H = H;
-		Vector aux = new Vector(D,0);
-		this.L = new Vector(p.x,p.y);
+		VectorFila aux = new VectorFila(D,0);
+		this.L = new VectorFila(p.x,p.y);
 		L.substract(aux);
-		this.R = new Vector(p.x,p.y);
+		this.R = new VectorFila(p.x,p.y);
 		R.add(aux);
 		this.d = d;
 		A.T = 3;
 		B.T = 9;
 	}
 	
-	public Vector position(int index) {
-		Vector p = new Vector(this.p.x , this.p.y + index*this.d + this.H);
+	public VectorFila position(int index) {
+		VectorFila p = new VectorFila(this.p.x , this.p.y + index*this.d + this.H);
 		return p;
 	}
 	

@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import ar.edu.itba.sds.caja.CajaImpl;
 import ar.edu.itba.sds.model.Agent;
-import ar.edu.itba.sds.model.Vector;
+import ar.edu.itba.sds.model.VectorFila;
 
 public class CajaImplTest {
 	/*
@@ -28,7 +28,7 @@ public class CajaImplTest {
 		}
 	}
 	
-	//@Test
+	@Test
 	public void statusTest() {
 		status();
 		Agent agent = new Agent();
@@ -58,7 +58,7 @@ public class CajaImplTest {
 		assertNull(cajas.getPositionOf(8));
 	}
 	
-	//@Test 
+	@Test 
 	public void getPositionOfTest() {
 		//status();
 		cajas.add(10,0,agents[0]);
@@ -112,7 +112,7 @@ public class CajaImplTest {
 		//status();
 		cajas.add(10, 5, agents[0]);
 		//status();
-		Vector pos = cajas.position(5);
+		VectorFila pos = cajas.position(5);
 		//System.out.println(pos);
 	}
 	

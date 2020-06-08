@@ -1,21 +1,21 @@
 package ar.edu.itba.sds.model;
 
-public class Vector {
+public class VectorFila {
 	
 	public double x;
 	public double y;
 	
-	public Vector(double x, double y) {
+	public VectorFila(double x, double y) {
 		this.x = x;
 		this.y = y;
 	}
 	
-	public void add(Vector other) {
+	public void add(VectorFila other) {
 		this.x += other.x;
 		this.y += other.y;
 	}
 	
-	public void substract(Vector other){
+	public void substract(VectorFila other){
 		this.x -= other.x;
 		this.y -= other.y;
 	}
