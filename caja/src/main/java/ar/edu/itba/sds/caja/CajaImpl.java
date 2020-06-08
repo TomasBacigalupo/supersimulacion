@@ -50,7 +50,9 @@ public class CajaImpl implements Caja {
     
     public CajaImpl(List<Vector<Double>> payingPositions , double distanceBetweenCajas) {
     	/*
-    	payingPositions = [L0,R0,L1,R1,L2,R2,...,Ln,Rn];
+    	payingPositions = [{L0,R0},{L1,R1},{L2,R2},...,{Ln,Rn}];
+    	
+    	payingPositions = [{L0x , L0y} , {R0x , R0t} , {L1x , L1y} , {R1x , R1y} , ... , {Lnx , Lny} , {Rnx , Rny}];
     	
     	N , la cantidad de cajas , seria payingPositions.size() / 2;
     	
@@ -58,11 +60,22 @@ public class CajaImpl implements Caja {
     	
     	p // punto inception de la paremetrización de cada caja
     	
+    	|-----------------------|
+    	
+    	L			p			R
+    	
+    	L = (xl , yl)
+    	
+    	R = (xr , yr)
+    	
+    	p = ((xl + xr)/2 , yp)
+    	
     	delta = distanceBetweenCajas;
     	*/
-    	this.N = payingPositions.size() / 2;
-    	double R0 = payingPositions.get(0).get(1);
-    	double L0 = payingPositions.get(0).get(0);
+    	
+    	this.N = payingPositions.size() / 2;// También podria ser /4 según como este hecho esto.
+    	double R0 = payingPositions.get(0).get(1);// ?
+    	double L0 = payingPositions.get(0).get(0);// ?
     	this.D = R0 - L0;
     	this.delta = distanceBetweenCajas;
     	
