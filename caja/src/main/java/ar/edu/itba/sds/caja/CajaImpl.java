@@ -42,7 +42,22 @@ public class CajaImpl implements Caja {
    	    	
     	CajaImpl ret = new CajaImpl(list,delta);
     	
+    	/*
+    	
+    	payingPositions = [p0 , p1 , p2 , ... , pn];
+    	
+    	//	pi = {pix , piy}
+    	
+    	payingPositions = [{p0x,p0y},{p1x,p1y},{p2x,p2y},...,{pnx,pny}];
+    	
+    	delta = distanceBetweenCajas;
     	*/
+    	
+//    	this.N = payingPositions.size();
+//    	this.p0x = payingPositions.get(0).get(0);
+//    	this.p0y = payingPositions.get(0).get(1);
+//    	this.delta = distanceBetweenCajas;
+    	
     	init();
     }
     
@@ -62,7 +77,7 @@ public class CajaImpl implements Caja {
     	this.p0x = payingPositions.get(0).get(0);
     	this.p0y = payingPositions.get(0).get(1);
     	this.delta = distanceBetweenCajas;
-    	
+    	init();
     }
     
     public CajaImpl(int N,double delta,double D,double H,double d,int max) {
