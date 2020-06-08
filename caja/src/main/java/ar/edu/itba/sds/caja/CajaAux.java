@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.TimeUnit;
 
+import ar.edu.itba.sds.model.Agent;
 import ar.edu.itba.sds.model.VectorFila;
 
 public class CajaAux {
@@ -20,14 +21,15 @@ public class CajaAux {
 	int counterA = 0;
 	int counterB = 0;
 	
+	Queue<Double>  times   = new LinkedList <>();
 	Queue<Integer> queue   = new LinkedList <>();
 	Queue<Integer> payingA = new LinkedList <>();
-	Queue<Integer> payingB = new LinkedList<> (); 
+	Queue<Integer> payingB = new LinkedList <>(); 
 	
 	int x = 0;
 	
 	StringBuilder ovito = new StringBuilder();
-	
+		
 	public CajaAux(VectorFila p,double D,double H,double d,int max) {
 		/*
 		p is the inception position
@@ -77,16 +79,24 @@ public class CajaAux {
 		if(!A.ocupado) {
 			Integer a = queue.poll();
 			if(a!=null) {
-				System.out.println("A " + a);
+				
 				A.work();
+				A.T = times.poll();
+				
+				System.out.println("A " + a + " time: " + A.T);
+				
 				payingA.add(a);
 			};
 		}
 		if(!B.ocupado) {
 			Integer b = queue.poll();
 			if(b!=null) {
-				System.out.println("B " + b);
+				
 				B.work();
+				B.T = times.poll();
+				
+				System.out.println("B " + b + " time: " + B.T);
+				
 				payingB.add(b);
 			};
 		}
@@ -112,6 +122,11 @@ public class CajaAux {
 				counterB++;
 			}
 		}
+	}
+	
+	public void add(Agent agent , double t) {
+		this.queue.add(agent.id);
+		this.times.add(t);
 	}
 	
 	public void print() {

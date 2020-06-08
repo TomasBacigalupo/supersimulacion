@@ -29,6 +29,9 @@ public class CajaImpl implements Caja {
     
     static CajaImpl singleton;
     
+    public TimesService ts = new TimesService();
+    public double timeAcum = 0;
+    
     public int atendidos = 0;
     
     public CajaImpl() {
@@ -172,9 +175,12 @@ public class CajaImpl implements Caja {
 	}
 	
 	@Override
-	public void add(int elem , int index , Agent agent) {
+	public void add(int elems , int index , Agent agent) {
 		if(cajas.get(index).queue.size() < N) {
-			cajas.get(index).queue.add(agent.id);
+			//cajas.get(index).queue.add(agent.id);
+			double t = ts.getCashierWaitingTime(elems);
+			timeAcum += t;
+			cajas.get(index).add(agent , t);
 		}
 	}
 	

@@ -31,21 +31,21 @@ public class App {
         while(true) {
         	int cons = 0;
 	        for(int n = 0 ; n < N ; n++) {
-	    		cajas.add(0,n,agents.get(cons));
+	    		cajas.add(5,n,agents.get(cons));
 	    		cons++;
-	    		cajas.add(10,n,agents.get(cons));
+	    		cajas.add(7,n,agents.get(cons));
 	    		cons++;
-	    		cajas.add(20,n,agents.get(cons));
-	    		cons++;
-	    		cajas.add(30,n,agents.get(cons));
-	    		cons++;
-	    		cajas.add(40,n,agents.get(cons)); 
-	    		cons++;
+//	    		cajas.add(20,n,agents.get(cons));
+//	    		cons++;
+//	    		cajas.add(30,n,agents.get(cons));
+//	    		cons++;
+//	    		cajas.add(40,n,agents.get(cons)); 
+//	    		cons++;
 	    		double x = rand.nextDouble();
 	        	if(x > P) {
 	        		int index = cajas.whereToGo();
 	        		System.out.println("Agrego en la caja " + index);
-	        		cajas.add(80,index,agents.get(cons));
+	        		cajas.add(10,index,agents.get(cons));
 	        		cons++;
 	        	}
 	    	}
@@ -53,8 +53,12 @@ public class App {
 	        cajas.whereToGo();
 	        String status = cajas.status();
 	        System.out.println(status);
+	        double start = System.currentTimeMillis();
 	        cajas.run();
+	        double elapsed = System.currentTimeMillis() - start;
 	        System.out.println("Generados: " + generados);
+	        System.out.println("Total Time elapsed: " + elapsed);
+	        System.out.println("Total Time Acumulated in cajas: " + cajas.timeAcum);
         }
     }
     public static int getRandomNumberInRange(int min, int max) {
