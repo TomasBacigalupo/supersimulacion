@@ -15,6 +15,8 @@ import ar.edu.itba.sds.model.VectorFila;
 public class CajaImpl implements Caja {
 	private int N = 8;// Cantidad de cajas
     private double delta = 20; // Separacion entre el punto p que parametriza cada caja
+    private double p0x = 0;
+    private double p0y = 0;
     private double D = 7.5;// Distancia de separación entre cajas
 	private double H = 5;// Distancia social interno de la caja
 	private double d = 2;// Distancia social interno de la caja
@@ -34,14 +36,10 @@ public class CajaImpl implements Caja {
     	
     	Geometry g = Geometry.getInstance();
     	
-    	List<Vector> list = g.getPayingPositions();
+    	List<Vector<Double> list = g.getPayingPositions();
     	
-    	this.N = list.length / 2;
-    	
-    	double delta = getDistanceBetweenCajas();
-    	
-    	this.D = R0 - L0;    	
-    	
+    	double delta = g.getDistanceBetweenCajas();
+   	    	
     	CajaImpl ret = new CajaImpl(list,delta);
     	
     	*/
@@ -50,33 +48,19 @@ public class CajaImpl implements Caja {
     
     public CajaImpl(List<Vector<Double>> payingPositions , double distanceBetweenCajas) {
     	/*
-    	payingPositions = [{L0,R0},{L1,R1},{L2,R2},...,{Ln,Rn}];
     	
-    	payingPositions = [{L0x , L0y} , {R0x , R0t} , {L1x , L1y} , {R1x , R1y} , ... , {Lnx , Lny} , {Rnx , Rny}];
+    	payingPositions = [p0 , p1 , p2 , ... , pn];
     	
-    	N , la cantidad de cajas , seria payingPositions.size() / 2;
+    	//	pi = {pix , piy}
     	
-    	D = R0 - L0;
-    	
-    	p // punto inception de la paremetrización de cada caja
-    	
-    	|-----------------------|
-    	
-    	L			p			R
-    	
-    	L = (xl , yl)
-    	
-    	R = (xr , yr)
-    	
-    	p = ((xl + xr)/2 , yp)
+    	payingPositions = [{p0x,p0y},{p1x,p1y},{p2x,p2y},...,{pnx,pny}];
     	
     	delta = distanceBetweenCajas;
     	*/
     	
-    	this.N = payingPositions.size() / 2;// También podria ser /4 según como este hecho esto.
-    	double R0 = payingPositions.get(0).get(1);// ?
-    	double L0 = payingPositions.get(0).get(0);// ?
-    	this.D = R0 - L0;
+    	this.N = payingPositions.size();
+    	this.p0x = payingPositions.get(0).get(0);
+    	this.p0y = payingPositions.get(0).get(1);
     	this.delta = distanceBetweenCajas;
     	
     }
@@ -93,7 +77,7 @@ public class CajaImpl implements Caja {
     
     public void init() {
 	    for(int n = 0 ; n < N ; n++) {
-	    	VectorFila pn = new VectorFila(n*delta,0);
+	    	VectorFila pn = new VectorFila(p0x + n*delta , p0y);
 	    	CajaAux cajan = new CajaAux(pn,D,H,d,max);
 	    	cajas.add(cajan);
 	    }
@@ -219,5 +203,24 @@ public class CajaImpl implements Caja {
 	@Override
 	public int atendidos() {
 		return atendidos;
+	}
+
+	@Override
+	public Vector<Double> positionAux(int index) {
+		VectorFila aux = this.position(index);
+		Vector<Double> ret = aux.B(aux);
+		return ret;
+	}
+
+	@Override
+	public Vector<Double> getPositionOfAux(int agentid) {
+		VectorFila aux = this.getPositionOf(agentid);
+		Vector<Double> ret = aux.B(aux);
+		return ret;
+	}
+
+	@Override
+	public double getSectorPosition() {
+		return p0y + 6;
 	}
 }
