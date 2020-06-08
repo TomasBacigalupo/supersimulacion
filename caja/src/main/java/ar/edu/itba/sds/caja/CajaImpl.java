@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 import ar.edu.itba.sds.interfaces.Caja;
 import ar.edu.itba.sds.model.Agent;
@@ -39,20 +40,19 @@ public class CajaImpl implements Caja {
     	
     	double delta = getDistanceBetweenCajas();
     	
-    	this.D = list[1] - list[0];    	
+    	this.D = R0 - L0;    	
+    	
+    	CajaImpl ret = new CajaImpl(list,delta);
+    	
     	*/
     	init();
     }
     
-    public CajaImpl(List<Double> payingPositions , double distanceBetweenCajas) {
+    public CajaImpl(List<Vector<Double>> payingPositions , double distanceBetweenCajas) {
     	/*
     	payingPositions = [L0,R0,L1,R1,L2,R2,...,Ln,Rn];
     	
-    	o tambien podria ser
-    	
-    	payingPositions = [P0 , P1 , P2 , ... , Pn];
-    	
-    	N , la cantidad de cajas , seria payingPositions.length / 2;
+    	N , la cantidad de cajas , seria payingPositions.size() / 2;
     	
     	D = R0 - L0;
     	
@@ -60,6 +60,12 @@ public class CajaImpl implements Caja {
     	
     	delta = distanceBetweenCajas;
     	*/
+    	this.N = payingPositions.size() / 2;
+    	double R0 = payingPositions.get(0).get(1);
+    	double L0 = payingPositions.get(0).get(0);
+    	this.D = R0 - L0;
+    	this.delta = distanceBetweenCajas;
+    	
     }
     
     public CajaImpl(int N,double delta,double D,double H,double d,int max) {
