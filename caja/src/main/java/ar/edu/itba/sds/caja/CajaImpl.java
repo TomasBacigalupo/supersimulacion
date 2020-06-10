@@ -105,7 +105,7 @@ public class CajaImpl implements Caja {
         for(int m = 0 ; m < N ; m++) {
 	        while(!cajas.get(m).isDone()) {
 	        	i++;
-	        	if(i%100000==0) {
+	        	if(i%10000000==0) {
 	        		flag = true;
 	        	}
 	        	int size = 0;
