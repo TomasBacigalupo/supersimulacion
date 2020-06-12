@@ -1,0 +1,441 @@
+Hello World!
+Driver Class Caja Module
+
+Agrego en la caja 5
+Agrego en la caja 6
+Agrego en la caja 0
+Fila 0 : 0 1 18 
+Fila 1 : 2 3 
+Fila 2 : 4 5 
+Fila 3 : 6 7 
+Fila 4 : 8 9 
+Fila 5 : 10 11 12 
+Fila 6 : 13 14 15 
+Fila 7 : 16 17 
+
+A 0 time: 71.9662690635308
+B 1 time: 181.54424970169896
+A 2 time: 168.96637943781516
+B 3 time: 183.58602619889828
+A 4 time: 270.77864487703147
+B 5 time: 9.014089248829238
+A 6 time: 256.19380749654607
+B 7 time: 78.28469760856694
+A 8 time: 253.0429758823651
+B 9 time: 593.5961898830194
+A 10 time: 66.55513177176192
+B 11 time: 250.64416987378976
+A 13 time: 130.85667825265364
+B 14 time: 154.2905724749164
+A 16 time: 404.515070708512
+B 17 time: 332.270532739269
+B payed 5
+[ true ][ false ][]
+x 
+
+----------------------------------------------
+A payed 10
+[ false ][ true ][x ]
+
+x 
+----------------------------------------------
+A 12 time: 150.89873399599372
+A payed 0
+[ false ][ true ][x ]
+
+x 
+----------------------------------------------
+A 18 time: 14.77442057093925
+B payed 7
+[ true ][ false ][]
+x 
+
+----------------------------------------------
+A payed 18
+[ false ][ true ][]
+
+x 
+----------------------------------------------
+A payed 13
+[ false ][ true ][x ]
+
+x 
+----------------------------------------------
+A 15 time: 489.64271633514244
+B payed 14
+[ true ][ false ][]
+x 
+
+----------------------------------------------
+A payed 2
+[ false ][ true ][]
+
+x 
+----------------------------------------------
+B payed 1
+[ false ][ false ][]
+
+
+----------------------------------------------
+[ false ][ false ][]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+B payed 3
+[ false ][ false ][]
+
+
+----------------------------------------------
+[ false ][ false ][]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+A payed 12
+[ false ][ true ][]
+
+x 
+----------------------------------------------
+B payed 11
+[ false ][ false ][]
+
+
+----------------------------------------------
+A payed 8
+[ false ][ true ][]
+
+x 
+----------------------------------------------
+A payed 6
+[ false ][ false ][]
+
+
+----------------------------------------------
+A payed 4
+[ false ][ false ][]
+
+
+----------------------------------------------
+[ false ][ false ][]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[ false ][ false ][]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+B payed 17
+[ true ][ false ][]
+x 
+
+----------------------------------------------
+A payed 16
+[ false ][ false ][]
+
+
+----------------------------------------------
+B payed 9
+[ false ][ false ][]
+
+
+----------------------------------------------
+[ false ][ false ][]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[ false ][ false ][]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+A payed 15
+[ false ][ false ][]
+
+
+----------------------------------------------
+[ false ][ false ][]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[ false ][ false ][]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+2	1
+1	1
+1	1
+1	1
+1	1
+2	1
+2	1
+1	1
+Atendidos: 19---------------------------------||||||||||||||||||||||||||||||
+Generados: 19
+Total Time elapsed: 620806.0
+Total Time Acumulated in cajas: 4061.421356121279
+Agrego en la caja 1
+Agrego en la caja 2
+Agrego en la caja 5
+Agrego en la caja 6
+Fila 0 : 0 1 
+Fila 1 : 2 3 4 
+Fila 2 : 5 6 7 
+Fila 3 : 8 9 
+Fila 4 : 10 11 
+Fila 5 : 12 13 14 
+Fila 6 : 15 16 17 
+Fila 7 : 18 19 
+
+A 0 time: 56.63852753831426
+B 1 time: 450.9891590210121
+A 2 time: 133.41265930674817
+B 3 time: 934.4294453423477
+A 5 time: 123.19171000763164
+B 6 time: 31.191491760311607
+A 8 time: 65.08367637147298
+B 9 time: 234.13914058413457
+A 10 time: 218.6814690923955
+B 11 time: 351.312090829984
+A 12 time: 364.87031582983803
+B 13 time: 62.6198824600483
+A 15 time: 257.372732329212
+B 16 time: 162.4044057984667
+A 18 time: 80.18619942391689
+B 19 time: 11.290465550093812
+B payed 19
+[ true ][ false ][]
+x 
+
+----------------------------------------------
+B payed 6
+[ true ][ false ][x ]
+x 
+
+----------------------------------------------
+B 7 time: 41.41463274984561
+A payed 0
+[ false ][ true ][]
+
+x 
+----------------------------------------------
+B payed 13
+[ true ][ false ][x ]
+x 
+
+----------------------------------------------
+B 14 time: 298.43496857458814
+A payed 8
+[ false ][ true ][]
+
+x 
+----------------------------------------------
+B payed 7
+[ true ][ false ][]
+x 
+
+----------------------------------------------
+A payed 18
+[ false ][ false ][]
+
+
+----------------------------------------------
+A payed 5
+[ false ][ false ][]
+
+
+----------------------------------------------
+A payed 2
+[ false ][ true ][x ]
+
+x 
+----------------------------------------------
+A 4 time: 8.087825510257314
+A payed 4
+[ false ][ true ][]
+
+x 
+----------------------------------------------
+B payed 16
+[ true ][ false ][x ]
+x 
+
+----------------------------------------------
+B 17 time: 5.917311962283987
+B payed 17
+[ true ][ false ][]
+x 
+
+----------------------------------------------
+A payed 10
+[ false ][ true ][]
+
+x 
+----------------------------------------------
+B payed 9
+[ false ][ false ][]
+
+
+----------------------------------------------
+A payed 15
+[ false ][ false ][]
+
+
+----------------------------------------------
+B payed 11
+[ false ][ false ][]
+
+
+----------------------------------------------
+B payed 14
+[ true ][ false ][]
+x 
+
+----------------------------------------------
+A payed 12
+[ false ][ false ][]
+
+
+----------------------------------------------
+B payed 1
+[ false ][ false ][]
+
+
+----------------------------------------------
+[ false ][ false ][]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+B payed 3
+[ false ][ false ][]
+
+
+----------------------------------------------
+[ false ][ false ][]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[ false ][ false ][]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[ false ][ false ][]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[ false ][ false ][]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[ false ][ false ][]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[ false ][ false ][]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[ false ][ false ][]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+3	2
+3	2
+2	3
+2	2
+2	2
+3	3
+3	3
+2	2
+Atendidos: 39---------------------------------||||||||||||||||||||||||||||||
+Generados: 39
+Total Time elapsed: 934711.0
+Total Time Acumulated in cajas: 7953.089466164182
+Agrego en la caja 1
+Agrego en la caja 6
+Agrego en la caja 7
+Fila 0 : 0 1 
+Fila 1 : 2 3 4 
+Fila 2 : 5 6 
+Fila 3 : 7 8 
+Fila 4 : 9 10 
+Fila 5 : 11 12 
+Fila 6 : 13 14 15 
+Fila 7 : 16 17 18 
+
+A 0 time: 3.022998910270088
+B 1 time: 146.3411182697078
+A 2 time: 231.63452613790585
+B 3 time: 83.83458869231717
+A 5 time: 27.094527982466285
+B 6 time: 13.428310852381317
+A 7 time: 502.2033894361239
+B 8 time: 92.66623297708374
+A 9 time: 224.1415324647144
+B 10 time: 45.78114989079994
+A 11 time: 114.26725077155947
+B 12 time: 31.198924892649494
+A 13 time: 152.48326915648423
+B 14 time: 24.656924586612796
+A 16 time: 148.57115444214048
+B 17 time: 72.71721163907961
+A payed 0
+[ false ][ true ][]
+
+x 
+----------------------------------------------
+B payed 6
+[ true ][ false ][]
+x 
+
+----------------------------------------------
+B payed 14
+[ true ][ false ][x ]
+x 
+
+----------------------------------------------
+B 15 time: 2.4358372325182565
+B payed 15
+[ true ][ false ][]
+x 
+
+----------------------------------------------
+A payed 5
+[ false ][ false ][]
+
+
+----------------------------------------------
+B payed 12
+[ true ][ false ][]
+x 
+
+----------------------------------------------
+B payed 10
+[ true ][ false ][]
+x 
+
+----------------------------------------------
+B payed 17
+[ true ][ false ][x ]
+x 
+
+----------------------------------------------
+B 18 time: 2.4130450618876873
+B payed 18
+[ true ][ false ][]
+x 
+
+----------------------------------------------
+B payed 3
+[ true ][ false ][x ]
+x 
+
+----------------------------------------------
+B 4 time: 104.74353746398502
+B payed 8
+[ true ][ false ][]
+x 
+
+----------------------------------------------
+A payed 11
+[ false ][ false ][]
+
+
+----------------------------------------------
