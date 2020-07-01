@@ -1,0 +1,733 @@
+/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/bin/java "-javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=49942:/Applications/IntelliJ IDEA.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath /Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/lib/tools.jar:/Users/luciopagni/eclipse-workspace/supersim/implementations/target/classes:/Users/luciopagni/eclipse-workspace/supersim/interfaces/target/classes ar.edu.itba.sds.App
+
+Get Cash Counters:  
+Target: 1 0.5 1.0
+Target: 2 2.0 1.0
+Target: 3 3.5 1.0
+Target: 4 5.0 1.0
+Target: 5 6.5 1.0
+Target: 6 8.0 1.0
+Target: 7 9.5 1.0
+Target: 8 11.0 1.0
+Caja: 1.00 1.00
+0.50 1.00 2.00 1.00
+Caja: 4.00 1.00
+3.50 1.00 5.00 1.00
+Caja: 7.00 1.00
+6.50 1.00 8.00 1.00
+Caja: 10.00 1.00
+9.50 1.00 11.00 1.00
+p0x: 1.0
+p0y: 1.0
+delta: 3.0
+N: 4
+WhereToGoXY is called ID: 9 FLAG: true -------> 0
+Add 9 in 0
+A 9 time: 203.4487327695074
+WhereToGoXY is called ID: 3 FLAG: true -------> 1
+Add 3 in 1
+A 3 time: 191.71342945073476
+WhereToGoXY is called ID: 2 FLAG: true -------> 2
+WhereToGoXY is called ID: 8 FLAG: true -------> 3
+Add 8 in 3
+A 8 time: 122.79064666002735
+Add 2 in 2
+A 2 time: 165.68168057679304
+WhereToGoXY is called ID: 4 FLAG: true -------> 0
+Add 4 in 0
+B 4 time: 173.1577350163178
+WhereToGoXY is called ID: 11 FLAG: true -------> 2
+Add 11 in 2
+B 11 time: 139.00948774398765
+WhereToGoXY is called ID: 7 FLAG: true -------> 1
+Add 7 in 1
+B 7 time: 131.61105924877575
+WhereToGoXY is called ID: 10 FLAG: true -------> 3
+WhereToGoXY is called ID: 13 FLAG: true -------> 1
+Add 13 in 1
+Add 10 in 3
+B 10 time: 132.90868361746135
+WhereToGoXY is called ID: 19 FLAG: true -------> 3
+Add 19 in 3
+WhereToGoXY is called ID: 23 FLAG: true -------> 2
+WhereToGoXY is called ID: 20 FLAG: true -------> 0
+WhereToGoXY is called ID: 16 FLAG: true -------> 3
+Add 23 in 2
+Add 16 in 3
+Add 20 in 0
+WhereToGoXY is called ID: 27 FLAG: true -------> 2
+WhereToGoXY is called ID: 14 FLAG: true -------> 1
+Add 27 in 2
+Add 14 in 1
+122.79064666002735 226.20000000001718 349.0000000000451
+A payed 8
+A 19 time: 161.93413356352437
+WhereToGoXY is called ID: 24 FLAG: true -------> 0
+165.68168057679304 229.3000000000179 395.00000000005554
+A payed 2
+A 23 time: 221.6218091541551
+WhereToGoXY is called ID: 28 FLAG: true -------> 2
+Add 24 in 0
+WhereToGoXY is called ID: 26 FLAG: true -------> 3
+131.61105924877575 267.2000000000265 398.8500000000564
+B payed 7
+B 13 time: 134.33206871770724
+139.00948774398765 259.9000000000248 398.95000000005643
+B payed 11
+B 27 time: 121.85003681255947
+191.71342945073476 212.45000000001406 404.2000000000576
+A payed 3
+A 14 time: 218.5110976528505
+173.1577350163178 233.95000000001895 407.1500000000583
+B payed 4
+B 20 time: 133.8443234414829
+Add 28 in 2
+203.4487327695074 207.3500000000129 410.80000000005913
+A payed 9
+A 24 time: 211.81093392097011
+WhereToGoXY is called ID: 35 FLAG: true -------> 0
+WhereToGoXY is called ID: 34 FLAG: true -------> 1
+WhereToGoXY is called ID: 12 FLAG: true -------> 0
+WhereToGoXY is called ID: 40 FLAG: true -------> 2
+WhereToGoXY is called ID: 22 FLAG: true -------> 1
+Add 35 in 0
+Add 34 in 1
+WhereToGoXY is called ID: 33 FLAG: true -------> 0
+132.90868361746135 288.9500000000314 421.90000000006165
+B payed 10
+B 16 time: 208.6958595055433
+Add 12 in 0
+Add 26 in 3
+Add 40 in 2
+Add 33 in 0
+Add 22 in 1
+WhereToGoXY is called ID: 39 FLAG: true -------> 3
+WhereToGoXY is called ID: 43 FLAG: true -------> 3
+WhereToGoXY is called ID: 45 FLAG: true -------> 2
+Add 43 in 3
+Add 39 in 3
+WhereToGoXY is called ID: 50 FLAG: true -------> 1
+Add 45 in 2
+WhereToGoXY is called ID: 5 FLAG: true -------> 3
+Add 5 in 3
+WhereToGoXY is called ID: 47 FLAG: true -------> 2
+WhereToGoXY is called ID: 41 FLAG: true -------> 1
+WhereToGoXY is called ID: 36 FLAG: true -------> 0
+Add 41 in 1
+Add 50 in 1
+WhereToGoXY is called ID: 42 FLAG: true -------> 1
+Add 42 in 1
+WhereToGoXY is called ID: 51 FLAG: true -------> 3
+Add 51 in 3
+Add 47 in 2
+WhereToGoXY is called ID: 55 FLAG: true -------> 0
+161.93413356352437 349.0000000000451 510.9500000000819
+A payed 19
+A 26 time: 120.9780080564699
+Add 55 in 0
+WhereToGoXY is called ID: 46 FLAG: true -------> 3
+121.85003681255947 398.95000000005643 520.850000000074
+B payed 27
+B 28 time: 191.35499229927333
+Add 46 in 3
+Add 36 in 0
+134.33206871770724 398.8500000000564 533.2000000000628
+B payed 13
+B 34 time: 227.3293639189153
+WhereToGoXY is called ID: 54 FLAG: true -------> 2
+133.8443234414829 407.1500000000583 541.0000000000557
+B payed 20
+B 35 time: 152.61084744787496
+WhereToGoXY is called ID: 49 FLAG: true -------> 1
+Add 54 in 2
+WhereToGoXY is called ID: 59 FLAG: true -------> 2
+Add 59 in 2
+WhereToGoXY is called ID: 53 FLAG: true -------> 0
+WhereToGoXY is called ID: 58 FLAG: true -------> 0
+Add 49 in 1
+Add 58 in 0
+Add 53 in 0
+WhereToGoXY is called ID: 70 FLAG: true -------> 1
+WhereToGoXY is called ID: 61 FLAG: true -------> 2
+Add 70 in 1
+Add 61 in 2
+WhereToGoXY is called ID: 56 FLAG: true -------> 3
+WhereToGoXY is called ID: 60 FLAG: true -------> 1
+WhereToGoXY is called ID: 63 FLAG: true -------> 2
+Add 60 in 1
+Add 63 in 2
+WhereToGoXY is called ID: 65 FLAG: true -------> 3
+221.6218091541551 395.00000000005554 616.6499999999869
+A payed 23
+A 40 time: 123.94854659262042
+WhereToGoXY is called ID: 62 FLAG: true -------> 2
+Add 56 in 3
+Add 65 in 3
+211.81093392097011 410.80000000005913 622.6499999999814
+A payed 24
+A 12 time: 175.20274236068667
+218.5110976528505 404.2000000000576 622.7499999999814
+A payed 14
+A 22 time: 169.74000430624073
+208.6958595055433 421.90000000006165 630.5999999999742
+B payed 16
+B 43 time: 165.25288517021337
+WhereToGoXY is called ID: 66 FLAG: true -------> 0
+Add 62 in 2
+120.9780080564699 510.9500000000819 631.949999999973
+A payed 26
+A 39 time: 217.2507879234493
+WhereToGoXY is called ID: 68 FLAG: true -------> 3
+WhereToGoXY is called ID: 52 FLAG: true -------> 1
+WhereToGoXY is called ID: 67 FLAG: true -------> 3
+Add 67 in 3
+Add 68 in 3
+WhereToGoXY is called ID: 72 FLAG: true -------> 0
+WhereToGoXY is called ID: 71 FLAG: true -------> 0
+Add 72 in 0
+Add 71 in 0
+WhereToGoXY is called ID: 69 FLAG: true -------> 1
+Add 66 in 0
+152.61084744787496 541.0000000000557 693.6499999999169
+B payed 35
+B 33 time: 135.19495156978735
+WhereToGoXY is called ID: 76 FLAG: true -------> 3
+WhereToGoXY is called ID: 90 FLAG: true -------> 2
+WhereToGoXY is called ID: 77 FLAG: true -------> 0
+WhereToGoXY is called ID: 79 FLAG: true -------> 3
+Add 76 in 3
+Add 79 in 3
+Add 90 in 2
+WhereToGoXY is called ID: 1 FLAG: true -------> 2
+Add 1 in 2
+191.35499229927333 520.850000000074 712.2499999999
+B payed 28
+B 45 time: 195.9895513573462
+Add 77 in 0
+Add 52 in 1
+Add 69 in 1
+WhereToGoXY is called ID: 80 FLAG: true -------> 1
+WhereToGoXY is called ID: 78 FLAG: true -------> 2
+Add 78 in 2
+Add 80 in 1
+123.94854659262042 616.6499999999869 740.5999999998742
+A payed 40
+A 47 time: 166.9838032859744
+WhereToGoXY is called ID: 64 FLAG: true -------> 2
+227.3293639189153 533.2000000000628 760.549999999856
+B payed 34
+B 41 time: 129.4414132601473
+Add 64 in 2
+WhereToGoXY is called ID: 73 FLAG: true -------> 1
+WhereToGoXY is called ID: 74 FLAG: true -------> 0
+Add 73 in 1
+Add 74 in 0
+WhereToGoXY is called ID: 81 FLAG: true -------> 1
+WhereToGoXY is called ID: 84 FLAG: true -------> 3
+Add 81 in 1
+169.74000430624073 622.7499999999814 792.499999999827
+A payed 22
+A 50 time: 135.1884932423589
+WhereToGoXY is called ID: 101 FLAG: true -------> 2
+Add 84 in 3
+165.25288517021337 630.5999999999742 795.8999999998239
+B payed 43
+B 5 time: 187.13557380254812
+175.20274236068667 622.6499999999814 797.8999999998221
+A payed 12
+A 55 time: 171.48024591040974
+Add 101 in 2
+WhereToGoXY is called ID: 100 FLAG: true -------> 0
+WhereToGoXY is called ID: 92 FLAG: true -------> 3
+Add 92 in 3
+Add 100 in 0
+WhereToGoXY is called ID: 48 FLAG: true -------> 0
+Add 48 in 0
+WhereToGoXY is called ID: 82 FLAG: true -------> 1
+WhereToGoXY is called ID: 83 FLAG: true -------> 0
+Add 83 in 0
+Add 82 in 1
+WhereToGoXY is called ID: 93 FLAG: true -------> 1
+Add 93 in 1
+135.19495156978735 693.6499999999169 828.8499999997939
+B payed 33
+B 36 time: 166.56927173838585
+WhereToGoXY is called ID: 106 FLAG: true -------> 2
+WhereToGoXY is called ID: 91 FLAG: true -------> 0
+Add 91 in 0
+Add 106 in 2
+WhereToGoXY is called ID: 89 FLAG: true -------> 3
+WhereToGoXY is called ID: 37 FLAG: true -------> 2
+Add 37 in 2
+217.2507879234493 631.949999999973 849.2499999997754
+A payed 39
+A 51 time: 123.97152305516462
+Add 89 in 3
+WhereToGoXY is called ID: 97 FLAG: true -------> 3
+WhereToGoXY is called ID: 102 FLAG: true -------> 0
+WhereToGoXY is called ID: 99 FLAG: true -------> 1
+Add 102 in 0
+WhereToGoXY is called ID: 87 FLAG: true -------> 3
+Add 87 in 3
+Add 97 in 3
+Add 99 in 1
+WhereToGoXY is called ID: 44 FLAG: true -------> 2
+WhereToGoXY is called ID: 114 FLAG: true -------> 1
+Add 44 in 2
+Add 114 in 1
+129.4414132601473 760.549999999856 889.9999999997383
+B payed 41
+B 42 time: 227.67350872399587
+WhereToGoXY is called ID: 118 FLAG: true -------> 1
+Add 118 in 1
+WhereToGoXY is called ID: 103 FLAG: true -------> 3
+WhereToGoXY is called ID: 109 FLAG: true -------> 0
+166.9838032859744 740.5999999998742 907.5999999997223
+A payed 47
+A 54 time: 146.81886896881952
+195.9895513573462 712.2499999999 908.2499999997217
+B payed 45
+B 59 time: 140.1564432224407
+Add 103 in 3
+WhereToGoXY is called ID: 38 FLAG: true -------> 2
+WhereToGoXY is called ID: 123 FLAG: true -------> 2
+Add 38 in 2
+135.1884932423589 792.499999999827 927.699999999704
+A payed 50
+A 49 time: 124.19789264558663
+WhereToGoXY is called ID: 111 FLAG: true -------> 1
+Add 123 in 2
+WhereToGoXY is called ID: 110 FLAG: true -------> 3
+WhereToGoXY is called ID: 57 FLAG: true -------> 1
+Add 57 in 1
+WhereToGoXY is called ID: 75 FLAG: true -------> 0
+Add 75 in 0
+Add 109 in 0
+Add 111 in 1
+WhereToGoXY is called ID: 88 FLAG: true -------> 2
+Add 88 in 2
+Add 110 in 3
+WhereToGoXY is called ID: 116 FLAG: true -------> 1
+Add 116 in 1
+WhereToGoXY is called ID: 29 FLAG: true -------> 0
+WhereToGoXY is called ID: 107 FLAG: true -------> 3
+WhereToGoXY is called ID: 113 FLAG: true -------> 2
+Add 29 in 0
+171.48024591040974 797.8999999998221 969.3999999996661
+A payed 55
+A 58 time: 225.02586922243384
+Add 107 in 3
+123.97152305516462 849.2499999997754 973.2499999996626
+A payed 51
+A 46 time: 210.53209848410327
+Add 113 in 2
+187.13557380254812 795.8999999998239 983.0499999996537
+B payed 5
+B 56 time: 231.56981241225282
+166.56927173838585 828.8499999997939 995.4499999996424
+B payed 36
+B 53 time: 151.2647590311674
+WhereToGoXY is called ID: 130 FLAG: true -------> 0
+Add 130 in 0
+WhereToGoXY is called ID: 127 FLAG: true -------> 3
+WhereToGoXY is called ID: 131 FLAG: true -------> 0
+WhereToGoXY is called ID: 96 FLAG: true -------> 3
+Add 127 in 3
+Add 96 in 3
+140.1564432224407 908.2499999997217 1048.4499999995942
+B payed 59
+B 61 time: 220.27794921976778
+124.19789264558663 927.699999999704 1051.899999999591
+A payed 49
+A 70 time: 151.48506884181856
+Add 131 in 0
+146.81886896881952 907.5999999997223 1054.4499999995887
+A payed 54
+A 63 time: 125.1047404156175
+WhereToGoXY is called ID: 17 FLAG: true -------> 2
+WhereToGoXY is called ID: 122 FLAG: true -------> 2
+Add 17 in 2
+Add 122 in 2
+WhereToGoXY is called ID: 133 FLAG: true -------> 1
+Add 133 in 1
+WhereToGoXY is called ID: 105 FLAG: true -------> 0
+WhereToGoXY is called ID: 121 FLAG: true -------> 1
+Add 105 in 0
+WhereToGoXY is called ID: 125 FLAG: true -------> 2
+Add 121 in 1
+WhereToGoXY is called ID: 95 FLAG: true -------> 3
+227.67350872399587 889.9999999997383 1117.6999999995312
+B payed 42
+B 60 time: 127.13007004805472
+WhereToGoXY is called ID: 119 FLAG: true -------> 1
+WhereToGoXY is called ID: 85 FLAG: true -------> 1
+Add 85 in 1
+WhereToGoXY is called ID: 126 FLAG: true -------> 0
+WhereToGoXY is called ID: 139 FLAG: true -------> 3
+Add 126 in 0
+WhereToGoXY is called ID: 128 FLAG: true -------> 2
+Add 139 in 3
+WhereToGoXY is called ID: 120 FLAG: true -------> 1
+Add 120 in 1
+WhereToGoXY is called ID: 124 FLAG: true -------> 3
+Add 124 in 3
+151.2647590311674 995.4499999996424 1146.7499999995048
+B payed 53
+B 72 time: 156.20691531678105
+Add 119 in 1
+Add 128 in 2
+WhereToGoXY is called ID: 135 FLAG: true -------> 0
+WhereToGoXY is called ID: 136 FLAG: true -------> 0
+Add 95 in 3
+Add 135 in 0
+125.1047404156175 1054.4499999995887 1179.599999999475
+A payed 63
+A 62 time: 158.56416055309472
+Add 136 in 0
+210.53209848410327 973.2499999996626 1183.799999999471
+A payed 46
+A 65 time: 234.93154784134362
+225.02586922243384 969.3999999996661 1194.4499999994614
+A payed 58
+A 71 time: 173.84676118045235
+WhereToGoXY is called ID: 153 FLAG: true -------> 2
+WhereToGoXY is called ID: 150 FLAG: true -------> 0
+Add 150 in 0
+WhereToGoXY is called ID: 144 FLAG: true -------> 3
+WhereToGoXY is called ID: 146 FLAG: true -------> 2
+Add 153 in 2
+151.48506884181856 1051.899999999591 1203.3999999994533
+A payed 70
+A 52 time: 137.37618433702278
+WhereToGoXY is called ID: 140 FLAG: true -------> 1
+Add 125 in 2
+Add 140 in 1
+Add 144 in 3
+Add 146 in 2
+231.56981241225282 983.0499999996537 1214.649999999443
+B payed 56
+B 67 time: 160.18096762309978
+WhereToGoXY is called ID: 148 FLAG: true -------> 3
+Add 148 in 3
+WhereToGoXY is called ID: 155 FLAG: true -------> 2
+Add 155 in 2
+WhereToGoXY is called ID: 145 FLAG: true -------> 3
+WhereToGoXY is called ID: 129 FLAG: true -------> 1
+Add 145 in 3
+Add 129 in 1
+WhereToGoXY is called ID: 143 FLAG: true -------> 0
+WhereToGoXY is called ID: 151 FLAG: true -------> 0
+Add 151 in 0
+WhereToGoXY is called ID: 104 FLAG: true -------> 3
+127.13007004805472 1117.6999999995312 1244.8499999994156
+B payed 60
+B 69 time: 154.302936588336
+Add 143 in 0
+WhereToGoXY is called ID: 138 FLAG: true -------> 1
+Add 138 in 1
+WhereToGoXY is called ID: 86 FLAG: true -------> 2
+220.27794921976778 1048.4499999995942 1268.7499999993938
+B payed 61
+B 90 time: 225.8619761253296
+WhereToGoXY is called ID: 164 FLAG: true -------> 2
+Add 164 in 2
+WhereToGoXY is called ID: 147 FLAG: true -------> 1
+WhereToGoXY is called ID: 141 FLAG: true -------> 3
+156.20691531678105 1146.7499999995048 1302.9999999993627
+B payed 72
+B 66 time: 140.4947867817211
+158.56416055309472 1179.599999999475 1338.1999999993307
+A payed 62
+A 1 time: 140.850805421772
+137.37618433702278 1203.3999999994533 1340.7999999993283
+A payed 52
+A 80 time: 133.763514447545
+WhereToGoXY is called ID: 167 FLAG: true -------> 0
+WhereToGoXY is called ID: 163 FLAG: true -------> 2
+Add 163 in 2
+WhereToGoXY is called ID: 173 FLAG: true -------> 1
+173.84676118045235 1194.4499999994614 1368.2999999993033
+A payed 71
+A 77 time: 154.70232153352003
+160.18096762309978 1214.649999999443 1374.8499999992973
+B payed 67
+B 68 time: 225.96790185913542
+WhereToGoXY is called ID: 192 FLAG: true -------> 0
+WhereToGoXY is called ID: 166 FLAG: true -------> 1
+Add 166 in 1
+WhereToGoXY is called ID: 160 FLAG: true -------> 3
+154.302936588336 1244.8499999994156 1399.1999999992752
+B payed 69
+B 73 time: 169.84570565885946
+Add 160 in 3
+WhereToGoXY is called ID: 181 FLAG: true -------> 1
+Add 181 in 1
+WhereToGoXY is called ID: 187 FLAG: true -------> 2
+234.93154784134362 1183.799999999471 1418.7499999992574
+A payed 65
+A 76 time: 194.3318372686181
+WhereToGoXY is called ID: 178 FLAG: true -------> 3
+WhereToGoXY is called ID: 157 FLAG: true -------> 0
+Add 157 in 0
+Add 178 in 3
+Add 173 in 1
+140.4947867817211 1302.9999999993627 1443.499999999235
+B payed 66
+B 74 time: 153.89663877918824
+WhereToGoXY is called ID: 177 FLAG: true -------> 0
+WhereToGoXY is called ID: 175 FLAG: true -------> 3
+WhereToGoXY is called ID: 168 FLAG: true -------> 2
+Add 192 in 0
+WhereToGoXY is called ID: 154 FLAG: true -------> 1
+133.763514447545 1340.7999999993283 1474.5999999992066
+A payed 80
+A 81 time: 152.29040834321052
+Add 168 in 2
+140.850805421772 1338.1999999993307 1479.0999999992025
+A payed 1
+A 78 time: 152.81302117611045
+WhereToGoXY is called ID: 161 FLAG: true -------> 2
+225.8619761253296 1268.7499999993938 1494.6499999991884
+B payed 90
+B 64 time: 172.71918072796032
+Add 177 in 0
+WhereToGoXY is called ID: 152 FLAG: true -------> 2
+WhereToGoXY is called ID: 176 FLAG: true -------> 1
+WhereToGoXY is called ID: 170 FLAG: true -------> 0
+WhereToGoXY is called ID: 115 FLAG: true -------> 1
+WhereToGoXY is called ID: 185 FLAG: true -------> 2
+WhereToGoXY is called ID: 193 FLAG: true -------> 3
+Add 185 in 2
+154.70232153352003 1368.2999999993033 1523.0499999991625
+A payed 77
+A 100 time: 200.55546848447722
+WhereToGoXY is called ID: 162 FLAG: true -------> 0
+WhereToGoXY is called ID: 172 FLAG: true -------> 0
+Add 152 in 2
+WhereToGoXY is called ID: 174 FLAG: true -------> 1
+Add 172 in 0
+WhereToGoXY is called ID: 171 FLAG: true -------> 0
+WhereToGoXY is called ID: 207 FLAG: true -------> 2
+169.84570565885946 1399.1999999992752 1569.0499999991207
+B payed 73
+B 82 time: 146.43532014535867
+WhereToGoXY is called ID: 159 FLAG: true -------> 1
+WhereToGoXY is called ID: 202 FLAG: true -------> 3
+WhereToGoXY is called ID: 137 FLAG: true -------> 1
+WhereToGoXY is called ID: 98 FLAG: true -------> 3
+Add 137 in 1
+153.89663877918824 1443.499999999235 1597.399999999095
+B payed 74
+B 48 time: 170.58235624312687
+WhereToGoXY is called ID: 165 FLAG: true -------> 0
+225.96790185913542 1374.8499999992973 1600.8499999990918
+B payed 68
+B 79 time: 229.64787531991146
+194.3318372686181 1418.7499999992574 1613.0999999990806
+A payed 76
+A 84 time: 142.14588086006995
+WhereToGoXY is called ID: 156 FLAG: true -------> 3
+Add 156 in 3
+152.29040834321052 1474.5999999992066 1626.899999999068
+A payed 81
+A 93 time: 165.40632718239758
+152.81302117611045 1479.0999999992025 1631.9499999990635
+A payed 78
+A 101 time: 146.99251697212293
+172.71918072796032 1494.6499999991884 1667.3999999990313
+B payed 64
+B 106 time: 198.76097600088684
+WhereToGoXY is called ID: 191 FLAG: true -------> 2
+WhereToGoXY is called ID: 188 FLAG: true -------> 2
+Add 191 in 2
+Add 188 in 2
+WhereToGoXY is called ID: 222 FLAG: true -------> 3
+Add 222 in 3
+WhereToGoXY is called ID: 132 FLAG: true -------> 1
+WhereToGoXY is called ID: 186 FLAG: true -------> 2
+146.43532014535867 1569.0499999991207 1715.4999999989875
+B payed 82
+B 99 time: 154.6905700554698
+WhereToGoXY is called ID: 215 FLAG: true -------> 1
+Add 215 in 1
+200.55546848447722 1523.0499999991625 1723.64999999898
+A payed 100
+A 83 time: 161.95613807605733
+WhereToGoXY is called ID: 169 FLAG: true -------> 0
+WhereToGoXY is called ID: 205 FLAG: true -------> 0
+142.14588086006995 1613.0999999990806 1755.2499999989514
+A payed 84
+A 92 time: 143.1569096025979
+170.58235624312687 1597.399999999095 1767.9999999989398
+B payed 48
+B 91 time: 179.22802219985957
+WhereToGoXY is called ID: 237 FLAG: true -------> 0
+146.99251697212293 1631.9499999990635 1778.9499999989298
+A payed 101
+A 37 time: 167.11656868943012
+WhereToGoXY is called ID: 210 FLAG: true -------> 2
+Add 132 in 1
+WhereToGoXY is called ID: 234 FLAG: true -------> 3
+165.40632718239758 1626.899999999068 1792.3499999989176
+A payed 93
+A 114 time: 208.28144445276402
+Add 234 in 3
+Add 167 in 0
+WhereToGoXY is called ID: 212 FLAG: true -------> 1
+Add 147 in 1
+Add 212 in 1
+229.64787531991146 1600.8499999990918 1830.499999998883
+B payed 79
+B 89 time: 133.32058573686453
+Add 237 in 0
+WhereToGoXY is called ID: 231 FLAG: true -------> 3
+Add 231 in 3
+WhereToGoXY is called ID: 224 FLAG: true -------> 3
+WhereToGoXY is called ID: 225 FLAG: true -------> 2
+198.76097600088684 1667.3999999990313 1866.1999999988504
+B payed 106
+B 44 time: 194.4878960346762
+WhereToGoXY is called ID: 250 FLAG: true -------> 2
+154.6905700554698 1715.4999999989875 1870.1999999988468
+B payed 99
+B 118 time: 127.96055726649193
+Add 250 in 2
+WhereToGoXY is called ID: 256 FLAG: true -------> 1
+WhereToGoXY is called ID: 214 FLAG: true -------> 1
+161.95613807605733 1723.64999999898 1885.6499999988328
+A payed 83
+A 102 time: 124.57207064910197
+WhereToGoXY is called ID: 190 FLAG: true -------> 0
+143.1569096025979 1755.2499999989514 1898.449999998821
+A payed 92
+A 87 time: 123.67766879905527
+WhereToGoXY is called ID: 248 FLAG: true -------> 3
+Add 248 in 3
+WhereToGoXY is called ID: 25 FLAG: true -------> 0
+Add 205 in 0
+WhereToGoXY is called ID: 230 FLAG: true -------> 0
+WhereToGoXY is called ID: 254 FLAG: true -------> 2
+167.11656868943012 1778.9499999989298 1946.0999999987778
+A payed 37
+A 38 time: 137.77037718422798
+179.22802219985957 1767.9999999989398 1947.2499999987767
+B payed 91
+B 75 time: 230.64722785692695
+WhereToGoXY is called ID: 208 FLAG: true -------> 1
+WhereToGoXY is called ID: 211 FLAG: true -------> 0
+133.32058573686453 1830.499999998883 1963.8499999987616
+B payed 89
+B 97 time: 237.27995729709878
+WhereToGoXY is called ID: 233 FLAG: true -------> 3
+Add 233 in 3
+Add 211 in 0
+Add 176 in 1
+WhereToGoXY is called ID: 195 FLAG: true -------> 2
+Add 195 in 2
+WhereToGoXY is called ID: 235 FLAG: true -------> 3
+Add 235 in 3
+WhereToGoXY is called ID: 259 FLAG: true -------> 2
+WhereToGoXY is called ID: 246 FLAG: true -------> 0
+127.96055726649193 1870.1999999988468 1998.1999999987304
+B payed 118
+B 57 time: 160.10440185134888
+208.28144445276402 1792.3499999989176 2000.6499999987282
+A payed 114
+A 111 time: 143.257440724959
+124.57207064910197 1885.6499999988328 2010.2499999987194
+A payed 102
+A 109 time: 131.572002315917
+WhereToGoXY is called ID: 244 FLAG: true -------> 1
+WhereToGoXY is called ID: 226 FLAG: true -------> 1
+Add 244 in 1
+Add 226 in 1
+WhereToGoXY is called ID: 200 FLAG: true -------> 0
+123.67766879905527 1898.449999998821 2022.1499999987086
+A payed 87
+A 103 time: 189.474071480953
+Add 214 in 1
+194.4878960346762 1866.1999999988504 2060.699999998731
+B payed 44
+B 123 time: 233.5925945778238
+WhereToGoXY is called ID: 206 FLAG: true -------> 3
+Add 206 in 3
+137.77037718422798 1946.0999999987778 2083.8999999988155
+A payed 38
+A 88 time: 208.220718691512
+WhereToGoXY is called ID: 271 FLAG: true -------> 2
+Add 271 in 2
+WhereToGoXY is called ID: 253 FLAG: true -------> 2
+Add 253 in 2
+WhereToGoXY is called ID: 32 FLAG: true -------> 1
+131.572002315917 2010.2499999987194 2141.8499999990263
+A payed 109
+A 29 time: 217.08957222228258
+143.257440724959 2000.6499999987282 2143.949999999034
+A payed 111
+A 116 time: 134.9579960511496
+WhereToGoXY is called ID: 277 FLAG: true -------> 3
+Add 200 in 0
+WhereToGoXY is called ID: 232 FLAG: true -------> 1
+160.10440185134888 1998.1999999987304 2158.3499999990863
+B payed 57
+B 133 time: 140.89898988399466
+230.64722785692695 1947.2499999987767 2177.8999999991574
+B payed 75
+B 130 time: 147.15391008772906
+WhereToGoXY is called ID: 257 FLAG: true -------> 0
+WhereToGoXY is called ID: 219 FLAG: true -------> 0
+Add 219 in 0
+WhereToGoXY is called ID: 269 FLAG: true -------> 1
+Add 169 in 0
+WhereToGoXY is called ID: 276 FLAG: true -------> 3
+237.27995729709878 1963.8499999987616 2201.149999999242
+B payed 97
+B 110 time: 159.55231592866278
+189.474071480953 2022.1499999987086 2211.64999999928
+A payed 103
+A 107 time: 165.18574400015666
+WhereToGoXY is called ID: 262 FLAG: true -------> 3
+Add 262 in 3
+Add 269 in 1
+WhereToGoXY is called ID: 285 FLAG: true -------> 0
+WhereToGoXY is called ID: 236 FLAG: true -------> 2
+Add 25 in 0
+WhereToGoXY is called ID: 278 FLAG: true -------> 3
+Add 278 in 3
+WhereToGoXY is called ID: 279 FLAG: true -------> 1
+134.9579960511496 2143.949999999034 2278.949999999525
+A payed 116
+A 121 time: 133.8714888925198
+WhereToGoXY is called ID: 263 FLAG: true -------> 1
+WhereToGoXY is called ID: 283 FLAG: true -------> 2
+208.220718691512 2083.8999999988155 2292.149999999573
+A payed 88
+A 113 time: 126.635060035664
+233.5925945778238 2060.699999998731 2294.299999999581
+B payed 123
+B 17 time: 126.44664803791218
+140.89898988399466 2158.3499999990863 2299.249999999599
+B payed 133
+B 85 time: 134.94369327137008
+WhereToGoXY is called ID: 274 FLAG: true -------> 1
+Add 274 in 1
+WhereToGoXY is called ID: 280 FLAG: true -------> 2
+Add 280 in 2
+147.15391008772906 2177.8999999991574 2325.099999999693
+B payed 130
+B 131 time: 189.06233129127182
+WhereToGoXY is called ID: 288 FLAG: true -------> 0
+217.08957222228258 2141.8499999990263 2358.949999999816
+A payed 29
+A 105 time: 142.6484308266495
+159.55231592866278 2201.149999999242 2360.7499999998226
+B payed 110
+B 127 time: 178.2660979815648
+WhereToGoXY is called ID: 6 FLAG: true -------> 0
+Add 6 in 0
+165.18574400015666 2211.64999999928 2376.849999999881
+A payed 107
+A 96 time: 180.5314668152771
+sim ended
+
+Process finished with exit code 0
