@@ -1,0 +1,189 @@
+#
+# Variables del main de la simulación
+#
+
+PROBANDO=ESTO ES UNA PRUEBA DE COMO LEER UNA PROPIEDAD DE UN ARCHIVO DE CONFIGURACION
+
+# Simulación
+simulation.dt2=0.5
+simulation.time=1000
+
+# Generador de agentes
+
+generator.time-period=5
+generator.agents-per-period=1
+generator.max-agents= x (parámetro que se varia)
+generator.order-items=false
+generator.boundary.x1=-1.0
+generator.boundary.x2=-1.0
+generator.boundary.y1=-1.0
+generator.boundary.y2=-1.0
+
+# Caja
+
+caja.line-space=2
+caja.h=3
+
+# Rango de velocidades del MO en estado going
+
+velocity.min.going=0.6
+velocity.max.going=0.8
+
+# Rango de items
+
+itemCount.min=15
+itemCount.max=15
+
+#
+# IMPORTANTE: para utilizar los valores default de los MO se deberá utilizar el valor -1 o -1.0 dependiendo del tipo
+# Cada MO cuenta con variables propias del MO y variables que dependen del estado del agente:
+# <pca/smf.2000/smf.2007/cpm>.<nombre-de-la-variable>.<estado>=-1.0
+#
+################## PCA ####################
+
+pca.anticipation-time=-1
+pca.static-value=-1
+pca.a1=-1
+pca.a2=-1
+pca.b=-1
+pca.social-force-1=-1.0
+pca.social-force-2=-1.0
+pca.personal-space=-1
+pca.desired-social-distance=-1
+
+pca.steepness.going=-1
+pca.wall-safe-distance.going=-1
+pca.vd.going=-1.0
+pca.tau.going=-1.0
+
+pca.steepness.approximating=-1
+pca.wall-safe-distance.approximating=-1
+pca.vd.approximating=-1.0
+pca.tau.approximating=-1.0
+
+pca.steepness.picking=-1
+pca.wall-safe-distance.picking=-1
+pca.vd.picking=-1.0
+pca.tau.picking=-1.0
+
+pca.steepness.queueing=-1
+pca.wall-safe-distance.queueing=-1
+pca.vd.queueing=-1.0
+pca.tau.queueing=-1.0
+
+pca.steepness.leaving=-1
+pca.wall-safe-distance.leaving=-1
+pca.vd.leaving=-1.0
+pca.tau.leaving=-1.0
+
+################## SMF ####################
+
+smf.desired-social-distance=1.5
+
+smf.tau.going=-1.0
+smf.lambda.going=-1.0
+smf.2000.a-agent.going=-1.0
+smf.2000.b-agent.going=-1.0
+smf.2000.a-wall.going=-1.0
+smf.2000.b-wall.going=-1.0
+smf.2007.a-agent.going=-1.0
+smf.2007.b-agent.going=-1.0
+smf.2007.a-wall.going=-1.0
+smf.2007.b-wall.going=-1.0
+
+smf.tau.approximating=-1.0
+smf.lambda.approximating=-1.0
+smf.2000.a-agent.approximating=-1.0
+smf.2000.b-agent.approximating=-1.0
+smf.2000.a-wall.approximating=-1.0
+smf.2000.b-wall.approximating=-1.0
+smf.2007.a-agent.approximating=-1.0
+smf.2007.b-agent.approximating=-1.0
+smf.2007.a-wall.approximating=-1.0
+smf.2007.b-wall.approximating=-1.0
+
+smf.tau.picking=-1.0
+smf.lambda.picking=-1.0
+smf.2000.a-agent.picking=-1.0
+smf.2000.b-agent.picking=-1.0
+smf.2000.a-wall.picking=-1.0
+smf.2000.b-wall.picking=-1.0
+smf.2007.a-agent.picking=-1.0
+smf.2007.b-agent.picking=-1.0
+smf.2007.a-wall.picking=-1.0
+smf.2007.b-wall.picking=-1.0
+
+smf.tau.queueing=-1.0
+smf.lambda.queueing=-1.0
+smf.2000.a-agent.queueing=-1.0
+smf.2000.b-agent.queueing=-1.0
+smf.2000.a-wall.queueing=-1.0
+smf.2000.b-wall.queueing=-1.0
+smf.2007.a-agent.queueing=-1.0
+smf.2007.b-agent.queueing=-1.0
+smf.2007.a-wall.queueing=-1.0
+smf.2007.b-wall.queueing=-1.0
+
+smf.tau.leaving=-1.0
+smf.lambda.leaving=-1.0
+smf.2000.a-agent.leaving=-1.0
+smf.2000.b-agent.leaving=-1.0
+smf.2000.a-wall.leaving=-1.0
+smf.2000.b-wall.leaving=-1.0
+smf.2007.a-agent.leaving=-1.0
+smf.2007.b-agent.leaving=-1.0
+smf.2007.a-wall.leaving=-1.0
+smf.2007.b-wall.leaving=-1.0
+
+################## CPM ####################
+
+cpm.desired-social-distance=1.5
+cpm.a-agent=1.25
+cpm.a-wall=15
+cpm.b-agent=1.25
+cpm.b-wall=0.15
+
+
+cpm.tau.going=0.5
+cpm.rmin.going=0.1
+cpm.rmax.going=0.37
+
+cpm.tau.approximating=0.5
+cpm.rmin.approximating=0.1
+cpm.rmax.approximating=0.35
+
+cpm.tau.picking=0.5
+cpm.rmin.picking=0.2
+cpm.rmax.picking=0.2
+
+cpm.tau.queueing=0.5
+cpm.rmin.queueing=0.1
+cpm.rmax.queueing=0.12
+
+cpm.tau.leaving=0.5
+cpm.rmin.leaving=0.1
+cpm.rmax.leaving=0.3
+
+statemachine.approximating_to_picking_distance=0.1
+statemachine.going_to_approximating_distance=2
+statemachine.leaving_to_going_distance=2
+
+# Can be equal to 1 SFM, 2 PCA or 3 CPM
+statemachine.operative_model=3
+# dt de la simulacion debe usarse el default de cada MOM, Se puede cambiar con mucho cuidado solo usuarios expertos.
+
+#que el dt de la simulacion esté ubicado despues de la eleccion del MOM,
+# que tenga un -1, para que se use el default de cad MOM
+# y que tenga un comentario de cambiar solo por expertos en el MOM a elegir.
+
+simulation.dt=0.05
+
+# Rango de tiempos de picking en segundos
+statemachine.pickingTime.min=60
+statemachine.pickingTime.max=90
+
+# 0 is false, 1 is true, agents random sidestep after a certain time stuck in going
+agents.sidestep.enabled=0
+agents.sidestep.duration_dt=100
+agents.sidestep.activation_dt=100
+agents.sidestep.activation_distance=2
